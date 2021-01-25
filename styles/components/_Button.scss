@@ -1,0 +1,31 @@
+.button{
+    background: $corp-accent;
+    border-radius: $border-radius;
+    color: $background;
+    border: none;
+    padding: 8px 26px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+
+    &.orange{
+        background: $orange;
+    }
+    &.green{
+        background: $green;
+    }
+    &.yellow{
+        background: $yellow;
+    }
+    &.grey{
+        background: $content-bg !important;
+        color: $text-light;
+        i{color: $text-light;}
+    }
+    &.white{
+        background: white !important;
+    }
+
+    i{
+        color: $background;
+    }
+}
