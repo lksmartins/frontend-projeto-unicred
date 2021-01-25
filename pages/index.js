@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import cards from './cards.json'
+import Card from '../components/Card'
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -21,12 +24,11 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-          <div className={styles.card}>
-            <h3>Título Exemplo</h3>
-            <img src="/imgs/barbanegra.webp"/>
-            <p>Descrição exemplo.</p>
-            <input type="text" placeholder="Insira a senha" />
-          </div>
+          {
+            cards.map((card)=>
+              <Card key={card.ref} card={card}/>
+            )
+          }
 
         </div>
 
