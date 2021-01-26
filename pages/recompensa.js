@@ -1,11 +1,12 @@
 import Head from 'next/head'
-
-import cards from '../cards.json'
 import Card from '../components/Card'
 
-export default function Home() {
+export default function Recompensa() {
+  
+  const action = 'pass_check'
+
   return (
-    <div className="container">
+    <div className="container" id="recompensa">
       <Head>
         <title>Projeto Unicred</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,13 +20,11 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Alguma descrição exemplo
+          Recompensa
         </p>
 
         <div className="grid">
-          {cards.map((card)=>
-              <Card key={card.ref} card={card}/>
-          )}
+            <Card api_action={action} card={{'title':'Título Exemplo', 'description':'Descrição Exemplo', 'ref':'recompensa'}}/>
         </div>
 
       </main>

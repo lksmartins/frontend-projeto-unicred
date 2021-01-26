@@ -3,10 +3,13 @@ import Modal from './Modal'
 
 export default function Form(props) {
 
+    //const sendIcon = <i className="fas fa-paper-plane"></i>
     const defaultButtonText = 'Enviar'
     const loadingButtonText = <i className="fas fa-spin fa-spinner"/>
 
-    const [stateValue, setValue] = useState( props.refObject ? props.refObject : null )
+    const refObject = props.refObject ? props.refObject : {[props.id]:""}
+
+    const [stateValue, setValue] = useState(refObject)
     const [modalShow, setModalShow] = useState(false)
     const [showMessage, setShowMessage] = useState('')
     const [buttonText, setButtonText] = useState(defaultButtonText)
@@ -37,7 +40,7 @@ export default function Form(props) {
         method: 'POST',
         body: JSON.stringify({ 
             token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
-            action: 'code_check',
+            action: props.api_action ? props.api_action : 'code_check',
             code: stateValue[e.target[0].name],
             ref: e.target[0].name
             })
@@ -47,16 +50,18 @@ export default function Form(props) {
 
         console.log(res.status, response)
 
+        // modal
         setShowMessage(response.message)
         setModalShow(true)
 
+        // form
         input.current.disabled = false
         setButtonText(defaultButtonText)
         
     }
 
     return(
-        <form onSubmit={props.onSubmit ? props.onSubmit : handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input
                 ref={input}
                 type="text"
@@ -71,7 +76,7 @@ export default function Form(props) {
                 show={modalShow}
                 onHide={()=>setModalShow(false)}
                 title="Aviso"
-            >
+                >
                 <p>{showMessage}</p>
             </Modal>
 

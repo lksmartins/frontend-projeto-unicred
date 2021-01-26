@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Form from './Form'
-import cards from '../pages/cards.json'
+import cards from '../cards.json'
 
 export default function Card(props) {
 
@@ -9,12 +9,18 @@ export default function Card(props) {
 
     const card = props.card
 
+    function hasImg(){
+        if(card.img && card.img !== false){
+            return(<img src={`/imgs/${card.img}`}/>)
+        }
+    }
+
     return (
         <div {...props} className="card">
             <h3>{card.title}</h3>
-            <img src={`/imgs/${card.img}`}/>
+            {hasImg()}
             <p>{card.description}</p>
-            <Form id={card.ref} refObject={refObject}/>
+            <Form id={card.ref} api_action={props.api_action ? props.api_action : null} refObject={refObject}/>
         </div>
     )
 }
