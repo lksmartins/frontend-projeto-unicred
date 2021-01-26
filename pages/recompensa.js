@@ -16,7 +16,7 @@ export default function Recompensa() {
       <main className="main">
 
         <h1 className="title">
-          Projeto <a href="https://nextjs.org">Unicred</a>
+          Projeto <a href="/">Unicred</a>
         </h1>
 
         <p className="description">

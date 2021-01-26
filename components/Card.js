@@ -5,9 +5,8 @@ import cards from '../cards.json'
 export default function Card(props) {
 
     const refObject = []
-    cards.map(card =>{ return( refObject[card.ref] = "" ) })
-
     const card = props.card
+    refObject[card.ref] = ""
 
     function hasImg(){
         if(card.img && card.img !== false){
