@@ -65,6 +65,7 @@ export default function Form(props) {
                 ref={input}
                 type="text"
                 name={props.id}
+                autoComplete="off"
                 placeholder="Insira a senha" 
                 onChange={handleInputChange}
                 value={stateValue[props.id]}

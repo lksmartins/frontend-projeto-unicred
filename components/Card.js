@@ -1,6 +1,5 @@
 import React from 'react'
 import Form from './Form'
-import cards from '../cards.json'
 
 export default function Card(props) {
 
