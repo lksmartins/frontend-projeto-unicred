@@ -3,8 +3,7 @@ import Modal from './Modal'
 
 export default function Form(props) {
 
-    //const sendIcon = <i className="fas fa-paper-plane"></i>
-    const defaultButtonText = 'Enviar'
+    const defaultButtonText = ()=>{return(<><i className="fas fa-paper-plane"/> Enviar</>)}
     const loadingButtonText = <i className="fas fa-spin fa-spinner"/>
 
     const refObject = props.refObject ? props.refObject : {[props.id]:""}

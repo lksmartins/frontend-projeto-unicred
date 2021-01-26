@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Card from '../components/Card'
+import Link from 'next/link'
 
 export default function Recompensa() {
   
@@ -16,7 +17,7 @@ export default function Recompensa() {
       <main className="main">
 
         <h1 className="title">
-          Projeto <a href="/">Unicred</a>
+          Projeto <Link href="/"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">

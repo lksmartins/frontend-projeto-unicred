@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import cards from '../cards.json'
 import Card from '../components/Card'
@@ -15,7 +16,7 @@ export default function Home() {
       <main className="main">
 
         <h1 className="title">
-          Projeto <a href="/recompensa">Unicred</a>
+          Projeto <Link href="/recompensa"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">
