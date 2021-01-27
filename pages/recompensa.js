@@ -17,7 +17,7 @@ export default function Recompensa() {
       <main className="main">
 
         <h1 className="title">
-          Projeto <Link href="/"><a>Unicred</a></Link>
+          Esquadrão <Link href="/"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">

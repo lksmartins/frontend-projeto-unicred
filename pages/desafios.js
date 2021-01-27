@@ -1,36 +1,36 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import cards from '../cards.json'
+
 import Card from '../components/Card'
+import Timer from '../components/Timer'
 
 export default function Home() {
-
-  const card = {
-    ref: 'desafio_0',
-    title: 'Desafio Inicial',
-    description: 'Na mensagem no envelope de vocês há uma senha escondida, digite esta senha, que é uma PALAVRA, no campo abaixo. Este é o seu primeiro desafio.'
-  }
-
   return (
     <div className="container">
       <Head>
-        <title>Projeto Unicred</title>
+        <title>Projeto Unicred - Desafios</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossOrigin="anonymous"/>
       </Head>
 
       <main className="main">
 
+        <Timer />
+
         <h1 className="title">
-          Esquadrão <Link href="/desafios"><a>Unicred</a></Link>
+          Esquadrão <Link href="/"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">
-           Bem-Vindo à seleção do Esquadrão UNICRED.
+          Desafios
         </p>
 
-        <div className="grid fill">
-          <Card key={card.ref} card={card}/>
+        <div className="grid">
+          {cards.map((card)=>
+              <Card key={card.ref} card={card}/>
+          )}
         </div>
 
       </main>

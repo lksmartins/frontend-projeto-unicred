@@ -13,8 +13,8 @@ export default function Form(props) {
     const [showMessage, setShowMessage] = useState('')
     const [buttonText, setButtonText] = useState(defaultButtonText)
 
-    const input = useRef(null);
-    const button = useRef(null);
+    const input = useRef(null)
+    const button = useRef(null)
 
     function handleInputChange(e) {
 
@@ -66,7 +66,7 @@ export default function Form(props) {
                 type="text"
                 name={props.id}
                 autoComplete="off"
-                placeholder="Insira a senha" 
+                placeholder="Insira a senha"
                 onChange={handleInputChange}
                 value={stateValue[props.id]}
             />
