@@ -50,8 +50,14 @@ export default function Form(props) {
         console.log(res.status, response)
 
         // modal
-        setShowMessage(response.message)
-        setModalShow(true)
+        if( response.status == 200 ){
+            props.modalSet ? props.modalSet(true) : setModalShow(true)
+            props.modalMessage ? props.modalMessage(response.unit) : setModalShow(true)
+        }
+        else{
+            setShowMessage(response.message)
+            setModalShow(true)
+        }
 
         // form
         input.current.disabled = false

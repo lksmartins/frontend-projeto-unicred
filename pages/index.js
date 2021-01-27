@@ -1,7 +1,10 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
 import Card from '../components/Card'
+import Modal from '../components/Modal'
+import Form from '../components/Form'
 
 export default function Home() {
 
@@ -10,6 +13,9 @@ export default function Home() {
     title: 'Desafio Inicial',
     description: 'Na mensagem no envelope de vocês há uma senha escondida, digite esta senha, que é uma PALAVRA, no campo abaixo. Este é o seu primeiro desafio.'
   }
+
+  const [modalShow, setModalShow] = useState(false)
+  const [modalMessage, setModalMessage] = useState('Mensagem padrão')
 
   return (
     <div className="container">
@@ -30,7 +36,16 @@ export default function Home() {
         </p>
 
         <div className="grid fill">
-          <Card key={card.ref} card={card}/>
+          <Card key={card.ref} card={card}>
+            <Form id={card.ref} api_action="code_timer" modalSet={setModalShow} modalMessage={setModalMessage}/>
+          </Card>
+          <Modal 
+              show={modalShow}
+              onHide={()=>setModalShow(false)}
+              title="Aviso s"
+              >
+              <p>Atenção integrantes da unidade de {modalMessage} ao clicar no botão de confirmar, o seu desafio irá começar.</p>
+          </Modal>
         </div>
 
       </main>

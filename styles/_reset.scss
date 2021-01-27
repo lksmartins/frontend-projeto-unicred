@@ -26,6 +26,7 @@ input, textarea{
   border-radius: 4px;
   border: 1px solid lightgrey;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 input:focus, textarea:focus{
   border-color: $accent;

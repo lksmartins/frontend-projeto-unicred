@@ -5,6 +5,7 @@ import cards from '../cards.json'
 
 import Card from '../components/Card'
 import Timer from '../components/Timer'
+import Form from '../components/Form'
 
 export default function Home() {
   return (
@@ -29,7 +30,9 @@ export default function Home() {
 
         <div className="grid">
           {cards.map((card)=>
-              <Card key={card.ref} card={card}/>
+              <Card key={card.ref} card={card}>
+                <Form id={card.ref} />
+              </Card>
           )}
         </div>
 

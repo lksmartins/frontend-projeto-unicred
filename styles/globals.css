@@ -23,6 +23,7 @@ input, textarea {
   border: 1px solid lightgrey;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 
 input:focus, textarea:focus {
@@ -59,6 +60,8 @@ button:focus {
 
 .main {
   padding: 5rem 0;
+  margin: 0 auto;
+  max-width: 960px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

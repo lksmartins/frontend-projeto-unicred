@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Card from '../components/Card'
 import Link from 'next/link'
 
+import Card from '../components/Card'
+import Form from '../components/Form'
+
 export default function Recompensa() {
-  
-  const action = 'pass_check'
 
   return (
     <div className="container" id="recompensa">
@@ -25,7 +25,9 @@ export default function Recompensa() {
         </p>
 
         <div className="grid">
-            <Card api_action={action} card={{'title':'Título Exemplo', 'description':'Descrição Exemplo', 'ref':'recompensa'}}/>
+            <Card card={{'title':'Título Exemplo', 'description':'Descrição Exemplo', 'ref':'recompensa'}}>
+              <Form id="recompensa" api_action="pass_check" />
+            </Card>
         </div>
 
       </main>
