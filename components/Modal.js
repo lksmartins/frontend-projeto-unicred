@@ -20,7 +20,7 @@ export default function myModal(props){
                 {props.children}
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}><i className="fas fa-times-circle"/> Fechar</Button>
+                { props.footer ? props.footer : <Button onClick={props.onHide}><i className="fas fa-times-circle"/> Fechar</Button> }
             </Modal.Footer>
         </Modal>
     )

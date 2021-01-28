@@ -34,13 +34,15 @@ export default function Form(props) {
 
         // load button
         setButtonText(loadingButtonText)
+
+        const code = stateValue[e.target[0].name]
         
         const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
         method: 'POST',
         body: JSON.stringify({ 
             token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
             action: props.api_action ? props.api_action : 'code_check',
-            code: stateValue[e.target[0].name],
+            code: code,
             ref: e.target[0].name
             })
         })
@@ -53,6 +55,7 @@ export default function Form(props) {
         if( response.status == 200 ){
             props.modalSet ? props.modalSet(true) : setModalShow(true)
             props.modalMessage ? props.modalMessage(response.unit) : setModalShow(true)
+            props.inputBack ? props.inputBack(code) : null
         }
         else{
             setShowMessage(response.message)

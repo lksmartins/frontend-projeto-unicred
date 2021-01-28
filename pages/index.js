@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 
 import Card from '../components/Card'
 import Modal from '../components/Modal'
 import Form from '../components/Form'
+import Button from '../components/Button'
 
 export default function Home() {
+
+  const router = useRouter()
 
   const card = {
     ref: 'desafio_0',
@@ -16,6 +20,7 @@ export default function Home() {
 
   const [modalShow, setModalShow] = useState(false)
   const [modalMessage, setModalMessage] = useState('Mensagem padrão')
+  const [unitCode, setUnitCode] = useState()
 
   return (
     <div className="container">
@@ -37,12 +42,18 @@ export default function Home() {
 
         <div className="grid fill">
           <Card key={card.ref} card={card}>
-            <Form id={card.ref} api_action="code_timer" modalSet={setModalShow} modalMessage={setModalMessage}/>
+            <Form id={card.ref} api_action="code_timer" modalSet={setModalShow} modalMessage={setModalMessage} inputBack={setUnitCode}/>
           </Card>
           <Modal 
               show={modalShow}
               onHide={()=>setModalShow(false)}
               title="Aviso s"
+              footer={
+                <>
+                <Button onClick={()=>setModalShow(false)}><i className="fas fa-times-circle"/> Fechar</Button>
+                <Button onClick={()=>router.push(`desafios/${unitCode.toUpperCase()}`)}><i className="fas fa-check-circle"/> Confirmar</Button>
+                </>
+              }
               >
               <p>Atenção integrantes da unidade de {modalMessage} ao clicar no botão de confirmar, o seu desafio irá começar.</p>
           </Modal>
