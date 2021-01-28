@@ -47,15 +47,18 @@ export default function Home() {
           <Modal 
               show={modalShow}
               onHide={()=>setModalShow(false)}
-              title="Aviso s"
+              title="Muito bem!"
               footer={
                 <>
-                <Button onClick={()=>setModalShow(false)}><i className="fas fa-times-circle"/> Fechar</Button>
+                <Button className="button red left" onClick={()=>setModalShow(false)}><i className="fas fa-times-circle"/> Fechar</Button>
                 <Button onClick={()=>router.push(`desafios/${unitCode.toUpperCase()}`)}><i className="fas fa-check-circle"/> Confirmar</Button>
                 </>
               }
               >
-              <p>Atenção integrantes da unidade de {modalMessage} ao clicar no botão de confirmar, o seu desafio irá começar.</p>
+              <p>Atenção integrantes da unidade <b>{modalMessage}</b>, ao clicar no botão <b>Confirmar</b>, o seu desafio irá começar!</p>
+              <p>Quanto mais rápido vocês resolverem este desafio, mais vocês irão se destacar. A equipe que resolver estes desafios o mais rápido irá ganhar um prêmio.</p>
+              <p>Se precisarem de ajuda em algum momento, podem mandar um Whatsapp para o número 51.981101419 para pedir uma dica, porém, cada dica irá descontar pontos de vocês na sua pontuação final.</p>
+              <p>Boa sorte.</p>
           </Modal>
         </div>
 

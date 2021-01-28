@@ -199,6 +199,10 @@ button:focus {
   background: #FF7B02;
 }
 
+.button.red {
+  background: red;
+}
+
 .button.green {
   background: #55FB79;
 }
@@ -503,7 +507,7 @@ button:focus {
   -ms-flex: 1 1 auto;
   -webkit-box-flex: 1;
           flex: 1 1 auto;
-  padding: 1.5rem 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .modal-footer {
@@ -515,9 +519,9 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0.75rem 2rem;
   padding-top: 1.5rem;
   border: none;
@@ -585,9 +589,9 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-betwee;
+      -ms-flex-pack: space-betwee;
+          justify-content: space-betwee;
 }
 
 .modal-room .modal-body {
