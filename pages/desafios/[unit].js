@@ -1,13 +1,17 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-import cards from '../cards.json'
+import cards from '../../cards.json'
 
-import Card from '../components/Card'
-import Timer from '../components/Timer'
-import Form from '../components/Form'
+import Card from '../../components/Card'
+import Timer from '../../components/Timer'
+import Form from '../../components/Form'
 
 export default function Home() {
+
+  const router = useRouter()
+  const { unit } = router.query
 
   return (
     <div className="container">
@@ -19,14 +23,14 @@ export default function Home() {
 
       <main className="main">
 
-        <Timer />
+        <Timer unit={unit} />
 
         <h1 className="title">
           Esquadrão <Link href="/"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">
-          Desafios
+          Desafios - {unit}
         </p>
 
         <div className="grid">

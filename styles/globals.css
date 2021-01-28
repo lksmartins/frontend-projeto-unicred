@@ -598,5 +598,6 @@ button:focus {
   position: fixed;
   top: 10px;
   right: 10px;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=globals.css.map */

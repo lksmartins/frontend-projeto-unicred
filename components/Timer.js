@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function Timer(props) {
 
-    const code = 'FUTURO' // vai vir atraves de props pelo router da pagina
+    const code = props.unit
 
     const loadingTimerText = <i className="fas fa-spin fa-spinner"/>
 
