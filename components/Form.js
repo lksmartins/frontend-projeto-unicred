@@ -51,7 +51,7 @@ export default function Form(props) {
         console.log(res.status, response)
 
         // modal
-        if( response.status == 200 ){
+        if( props.modalSet && response.status === 200 ){
             props.modalSet ? props.modalSet(true) : setModalShow(true)
             props.modalMessage ? props.modalMessage(response.unit) : setModalShow(true)
             props.inputBack ? props.inputBack(code) : null

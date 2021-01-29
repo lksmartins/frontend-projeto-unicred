@@ -80,7 +80,6 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field1"
-						myref="desafio1_field1"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 1"
@@ -90,7 +89,6 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field2"
-						myref="desafio1_field2"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 2"
@@ -100,7 +98,6 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field3"
-						myref="desafio1_field3"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 3"
@@ -111,7 +108,7 @@ export default function Desafio() {
 				</Card>
 
 				<Card card={ {"title": "Desafio 2 - Quebra-Cabeça", "description": ""} }>
-					<Form className="desafio2">
+					<Form values={stateDesafio2} myref="desafio2" className="desafio2">
 
 						<div className="line">
 
@@ -121,7 +118,6 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field1"
-							myref="desafio2_field1"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantos Besouros?"
@@ -138,7 +134,6 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field2"
-							myref="desafio2_field2"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantos Côcos?"
@@ -155,7 +150,6 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field3"
-							myref="desafio2_field3"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantas Adagas?"
@@ -168,7 +162,7 @@ export default function Desafio() {
 				</Card>
 
 				<Card card={ {"title": "Desafio 3 - Evidências", "description": "Um crime foi cometido e houve uma confusão nas evidências encontradas. Organize as evidências e nos ajude a identificar quem é quem e onde vivem o assassino, vítima, cúmplice e testemunda deste caso."} }>
-					<Form className="desafio3">
+					<Form values={stateDesafio3} myref="desafio3" className="desafio3">
 
 						<div className="line">
 
@@ -176,7 +170,6 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field1"
-								myref="desafio3_field1"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é o Assasino?"
@@ -187,11 +180,10 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field2"
-								myref="desafio3_field2"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field2} >
-									<option defaultValue="0">Selecione uma casa</option>
+									<option value="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -207,7 +199,6 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field3"
-								myref="desafio3_field3"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é a Vítima?"
@@ -218,11 +209,10 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field4"
-								myref="desafio3_field4"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field4} >
-									<option defaultValue="0">Selecione uma casa</option>
+									<option value="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -238,7 +228,6 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field5"
-								myref="desafio3_field5"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é a Testemunha?"
@@ -249,11 +238,10 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field6"
-								myref="desafio3_field6"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field6} >
-									<option defaultValue="0">Selecione uma casa</option>
+									<option value="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -269,7 +257,6 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field7"
-								myref="desafio3_field7"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é o Cúmplice?"
@@ -280,11 +267,10 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field8"
-								myref="desafio3_field8"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field8} >
-									<option defaultValue="0">Selecione uma casa</option>
+									<option value="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
