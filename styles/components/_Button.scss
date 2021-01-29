@@ -2,10 +2,22 @@
     background: $corp-accent;
     border-radius: $border-radius;
     color: $background;
-    border: none;
+    border: 2px solid $corp-accent;
     padding: 8px 26px;
     font-size: 15px;
     transition: all 0.3s ease;
+
+    &:hover{
+        background: rgba($corp-accent, 0.3);
+        border-color: $corp-accent;
+        color: $corp-accent;
+        i{color: $corp-accent; transition: all 0.3s ease;}
+    }
+
+    &:hover{
+        background: black;
+        border-color: black;
+    }
 
     &.orange{
         background: $orange;

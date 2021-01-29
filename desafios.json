@@ -1,0 +1,23 @@
+[
+    { 
+        "ref":"desafio_1", 
+        "title": "Desafio 1 - Labirinto", 
+        "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar.", 
+        "img": "barbanegra.webp", 
+        "fields": 3
+    },
+    { 
+        "ref":"desafio_2", 
+        "title": "Desafio 1 - Quebra-Cabeça", 
+        "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar.", 
+        "img": "barbanegra.webp", 
+        "fields": 8
+    },
+    { 
+        "ref":"desafio_1", 
+        "title": "Desafio 1 - Labirinto", 
+        "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar.", 
+        "img": "barbanegra.webp", 
+        "fields": 3
+    }
+]

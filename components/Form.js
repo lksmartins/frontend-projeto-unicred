@@ -13,7 +13,6 @@ export default function Form(props) {
     const [showMessage, setShowMessage] = useState('')
     const [buttonText, setButtonText] = useState(defaultButtonText)
 
-    const input = useRef(null)
     const button = useRef(null)
 
     function handleInputChange(e) {
@@ -30,7 +29,6 @@ export default function Form(props) {
         e.preventDefault()
 
         // disable input
-        input.current.disabled = true
 
         // load button
         setButtonText(loadingButtonText)
@@ -63,22 +61,21 @@ export default function Form(props) {
         }
 
         // form
-        input.current.disabled = false
         setButtonText(defaultButtonText)
         
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input
-                ref={input}
+        <form className={props.className ? props.className : '' } onSubmit={handleSubmit}>
+            { props.children ? props.children :
+                <input
                 type="text"
                 name={props.id}
                 autoComplete="off"
                 placeholder="Insira a senha"
                 onChange={handleInputChange}
-                value={stateValue[props.id]}
-            />
+                value={stateValue[props.id]}/>
+            }
             <button ref={button} className="button" type="submit">{buttonText}</button>
 
             <Modal 

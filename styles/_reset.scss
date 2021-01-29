@@ -17,7 +17,7 @@ a {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-input, textarea{
+input, textarea, select{
 
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -28,7 +28,7 @@ input, textarea{
   transition: 0.3s;
   text-transform: uppercase;
 }
-input:focus, textarea:focus{
+input:focus, textarea:focus, select:focus{
   border-color: $accent;
   outline: none;
 }
