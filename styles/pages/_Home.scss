@@ -74,11 +74,8 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 3rem;
-
-    &.fill{
-      width: 80%;
-      flex-direction: column;
-    }
+    flex-direction: column;
+    width: 80%;
   }
   
   .logo {
@@ -89,10 +86,6 @@
     .grid {
       width: 100%;
       flex-direction: column;
-
-      &.fill{
-        width: 100%;
-      }
     }
   }
   

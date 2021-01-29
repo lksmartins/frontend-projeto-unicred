@@ -1,8 +1,8 @@
 .card {
     position: relative;
     margin: 1rem;
-    flex-basis: 45%;
-    align-self: flex-start;
+    align-self: center;
+    width: 100%;
     padding: 1.5rem;
     text-align: center;
     color: inherit;
@@ -10,6 +10,13 @@
     border: 1px solid #eaeaea;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    .description{
+      margin: 10px 0 20px 0;
+      padding-bottom: 20px;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(black, 0.1);
+    }
 
     form{
       display: flex;

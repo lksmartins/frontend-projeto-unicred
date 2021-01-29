@@ -18,7 +18,7 @@ export default function Desafio() {
 	const desafio2 = {field1:"", field2:"", field3:""}
 	const [stateDesafio2, setDesafio2] = useState(desafio2)
 
-	const desafio3 = {field1:"", field2:"", field3:"", field4:"", field5:"", field6:"", field7:"", field8:""}
+	const desafio3 = {field1:"", field2:"0", field3:"", field4:"0", field5:"", field6:"0", field7:"", field8:"0"}
 	const [stateDesafio3, setDesafio3] = useState(desafio3)
 
 	function handleInputChange(e) {
@@ -58,8 +58,6 @@ export default function Desafio() {
 		<div className="container">
 		<Head>
 			<title>Projeto Unicred - Desafios</title>
-			<link rel="icon" href="/favicon.ico" />
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossOrigin="anonymous"/>
 		</Head>
 
 		<main className="main">
@@ -76,7 +74,7 @@ export default function Desafio() {
 
 			<div className="grid">
 
-				<Card key="desafio1" card={ {"title": "Desafio 1 - Labirinto", "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar.", "img": "barbanegra.webp"} }>
+				<Card card={ {"title": "Desafio 1 - Labirinto", "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar."} }>
 					<Form className="desafio1 block">
 
 						<input
@@ -109,7 +107,7 @@ export default function Desafio() {
 					</Form>
 				</Card>
 
-				<Card key="desafio2" card={ {"title": "Desafio 2 - Quebra-Cabeça", "description": "", "img": "fachada.webp"} }>
+				<Card card={ {"title": "Desafio 2 - Quebra-Cabeça", "description": ""} }>
 					<Form className="desafio2">
 
 						<div className="line">
@@ -163,7 +161,7 @@ export default function Desafio() {
 					</Form>
 				</Card>
 
-				<Card key="desafio3" card={ {"title": "Desafio 3 - Evidências", "description": "", "img": "barbanegra.webp"} }>
+				<Card card={ {"title": "Desafio 3 - Evidências", "description": "Um crime foi cometido e houve uma confusão nas evidências encontradas. Organize as evidências e nos ajude a identificar quem é quem e onde vivem o assassino, vítima, cúmplice e testemunda deste caso."} }>
 					<Form className="desafio3">
 
 						<div className="line">
@@ -185,7 +183,7 @@ export default function Desafio() {
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field2} >
-									<option selected>Selecione uma cor</option>
+									<option defaultValue="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -214,7 +212,7 @@ export default function Desafio() {
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field4} >
-									<option selected>Selecione uma cor</option>
+									<option defaultValue="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -243,7 +241,7 @@ export default function Desafio() {
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field6} >
-									<option selected>Selecione uma cor</option>
+									<option defaultValue="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
@@ -272,7 +270,7 @@ export default function Desafio() {
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field8} >
-									<option selected>Selecione uma cor</option>
+									<option defaultValue="0">Selecione uma casa</option>
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>

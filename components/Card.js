@@ -14,7 +14,7 @@ export default function Card(props) {
         <div {...props} className="card">
             <h3>{card.title}</h3>
             {hasImg()}
-            <p>{card.description}</p>
+            <p className="description">{card.description}</p>
             {props.children}
         </div>
     )
