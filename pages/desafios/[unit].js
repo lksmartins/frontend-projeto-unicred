@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import Card from '../../components/Card'
 import Timer from '../../components/Timer'
 import Form from '../../components/Form'
+import Modal from '../../components/Modal'
 
 export default function Desafio() {
 
@@ -18,8 +19,13 @@ export default function Desafio() {
 	const desafio2 = {field1:"", field2:"", field3:""}
 	const [stateDesafio2, setDesafio2] = useState(desafio2)
 
-	const desafio3 = {field1:"", field2:"0", field3:"", field4:"0", field5:"", field6:"0", field7:"", field8:"0"}
+	const desafio3 = {field1:"caroline", field2:"CINZA", field3:"antonio", field4:"GRANDE", field5:"fernanda", field6:"VERMELHA", field7:"luis", field8:"AZUL"}
 	const [stateDesafio3, setDesafio3] = useState(desafio3)
+
+	const desafiosSolved = {"desafio1":false, "desafio2":false, "desafio3":false }
+	const [stateDesafiosSolved, setDesafiosSolved] = useState(desafiosSolved)
+
+	const [modalShow, setModalShow] = useState(false)
 
 	function handleInputChange(e) {
 
@@ -52,7 +58,54 @@ export default function Desafio() {
 			setDesafio3(fState)
 		}
 		
-    }
+	}
+	
+	function desafioSolved( ref ){
+
+		console.log("desafioSolved")
+		console.log(ref)
+
+		let solved = {...stateDesafiosSolved}
+		if( ref == 'desafio1' ){
+			solved.desafio1 = true
+		}
+		if( ref == 'desafio2' ){
+			solved.desafio2 = true
+		}
+		if( ref == 'desafio3' ){
+			solved.desafio3 = true
+		}
+
+		setDesafiosSolved(solved)
+
+	}
+
+	useEffect(() => {
+
+        checkSolved()
+
+    }, [stateDesafiosSolved])
+
+	function checkSolved(){
+
+		console.log('checkSolved')
+
+		let count = 0
+
+		Object.keys(stateDesafiosSolved).map(function(key) {
+
+			console.log(stateDesafiosSolved[key])
+			if( stateDesafiosSolved[key] ){
+				count++
+			}
+			
+		});
+
+		if( count == Object.keys(stateDesafiosSolved).length ){
+			alert('Todos desafios resolvidos!')
+		}
+
+	}
 
 	return (
 		<div className="container">
@@ -74,8 +127,22 @@ export default function Desafio() {
 
 			<div className="grid">
 
+				<Modal 
+				show={modalShow}
+				onHide={()=>setModalShow(false)}
+				title="Desafio Solucionado!"
+					>
+					<p>Parabéns. Esse desafio foi solucionado!</p>
+				</Modal>
+
 				<Card card={ {"title": "Desafio 1 - Labirinto", "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar."} }>
-					<Form values={stateDesafio1} myref="desafio1" className="desafio1 block">
+					<Form 
+					values={stateDesafio1} 
+					myref="desafio1" 
+					className="desafio1 block"
+					callback={desafioSolved}
+					modalSet={setModalShow}
+					>
 
 						<input
 						type="text"
@@ -108,7 +175,13 @@ export default function Desafio() {
 				</Card>
 
 				<Card card={ {"title": "Desafio 2 - Quebra-Cabeça", "description": ""} }>
-					<Form values={stateDesafio2} myref="desafio2" className="desafio2">
+					<Form 
+					values={stateDesafio2} 
+					myref="desafio2" 
+					className="desafio2"
+					callback={desafioSolved}
+					modalSet={setModalShow}
+					>
 
 						<div className="line">
 
@@ -162,7 +235,13 @@ export default function Desafio() {
 				</Card>
 
 				<Card card={ {"title": "Desafio 3 - Evidências", "description": "Um crime foi cometido e houve uma confusão nas evidências encontradas. Organize as evidências e nos ajude a identificar quem é quem e onde vivem o assassino, vítima, cúmplice e testemunda deste caso."} }>
-					<Form values={stateDesafio3} myref="desafio3" className="desafio3">
+					<Form 
+					values={stateDesafio3} 
+					myref="desafio3" 
+					className="desafio3"
+					callback={desafioSolved}
+					modalSet={setModalShow}
+					>
 
 						<div className="line">
 

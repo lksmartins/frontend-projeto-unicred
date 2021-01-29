@@ -8,14 +8,26 @@
     font-weight: bold;
     transition: all 0.3s ease;
 
+    i{transition: all 0.3s ease;}
+
     &:hover{
         background: rgba($corp-accent, 0.3);
         color: $corp-accent;
-        i{color: $corp-accent; transition: all 0.3s ease;}
+        i{color: $corp-accent;}
     }
 
     &:hover{
         background: black;
+    }
+
+    &.solved{
+        background: #00B08F;
+        &:hover{
+            background: #00B08F;
+            color: white;
+            cursor: default;
+            i{color: white;}
+        }
     }
 
     &.orange{

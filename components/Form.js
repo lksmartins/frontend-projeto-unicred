@@ -12,6 +12,9 @@ export default function Form(props) {
     const [modalShow, setModalShow] = useState(false)
     const [showMessage, setShowMessage] = useState('')
     const [buttonText, setButtonText] = useState(defaultButtonText)
+    const [buttonClass, setButtonClass] = useState("button")
+    const [buttonDisabled, setButtonDisabled] = useState("")
+    
 
     const button = useRef(null)
 
@@ -53,16 +56,21 @@ export default function Form(props) {
         // modal
         if( props.modalSet && response.status === 200 ){
             props.modalSet ? props.modalSet(true) : setModalShow(true)
-            props.modalMessage ? props.modalMessage(response.unit) : setModalShow(true)
+            props.modalMessage ? props.modalMessage(response.unit) : null
             props.inputBack ? props.inputBack(code) : null
+            props.callback ? props.callback(myRef) : null
+    
+            setButtonText("Solucionado")
+            setButtonClass("button solved")
+            setButtonDisabled("disabled")
         }
         else{
             setShowMessage(response.message)
             setModalShow(true)
-        }
 
-        // form
-        setButtonText(defaultButtonText)
+            setButtonText(defaultButtonText)
+        }
+        
         
     }
 
@@ -78,7 +86,7 @@ export default function Form(props) {
                 onChange={handleInputChange}
                 value={stateValue[props.id]}/>
             }
-            <button ref={button} className="button" type="submit">{buttonText}</button>
+            <button ref={button} className={buttonClass} disabled={buttonDisabled} type="submit">{buttonText}</button>
 
             <Modal 
                 show={modalShow}

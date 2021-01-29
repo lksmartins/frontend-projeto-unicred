@@ -192,6 +192,11 @@ button:focus {
   transition: all 0.3s ease;
 }
 
+.button i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .button:hover {
   background: rgba(0, 163, 255, 0.3);
   color: #00A3FF;
@@ -199,12 +204,24 @@ button:focus {
 
 .button:hover i {
   color: #00A3FF;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .button:hover {
   background: black;
+}
+
+.button.solved {
+  background: #00B08F;
+}
+
+.button.solved:hover {
+  background: #00B08F;
+  color: white;
+  cursor: default;
+}
+
+.button.solved:hover i {
+  color: white;
 }
 
 .button.orange {
