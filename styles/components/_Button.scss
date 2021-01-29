@@ -23,6 +23,12 @@
     }
     &.red{
         background: red;
+
+        &:hover{
+            background: #9E0000;
+            color: white;
+            i{color: white;}
+        }
     }
     &.green{
         background: $green;

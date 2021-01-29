@@ -215,6 +215,15 @@ button:focus {
   background: red;
 }
 
+.button.red:hover {
+  background: #9E0000;
+  color: white;
+}
+
+.button.red:hover i {
+  color: white;
+}
+
 .button.green {
   background: #55FB79;
 }
@@ -688,6 +697,9 @@ button:focus {
   margin: 3px 6px 3px 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .desafio2 .line .img-wrapper img {
