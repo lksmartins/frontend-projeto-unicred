@@ -184,7 +184,7 @@ button:focus {
   background: #00A3FF;
   border-radius: 4px;
   color: white;
-  border: 2px solid #00A3FF;
+  border: none;
   padding: 8px 26px;
   font-size: 16px;
   font-weight: bold;
@@ -194,7 +194,6 @@ button:focus {
 
 .button:hover {
   background: rgba(0, 163, 255, 0.3);
-  border-color: #00A3FF;
   color: #00A3FF;
 }
 
@@ -206,7 +205,6 @@ button:focus {
 
 .button:hover {
   background: black;
-  border-color: black;
 }
 
 .button.orange {

@@ -2,7 +2,7 @@
     background: $corp-accent;
     border-radius: $border-radius;
     color: $background;
-    border: 2px solid $corp-accent;
+    border: none;
     padding: 8px 26px;
     font-size: 16px;
     font-weight: bold;
@@ -10,14 +10,12 @@
 
     &:hover{
         background: rgba($corp-accent, 0.3);
-        border-color: $corp-accent;
         color: $corp-accent;
         i{color: $corp-accent; transition: all 0.3s ease;}
     }
 
     &:hover{
         background: black;
-        border-color: black;
     }
 
     &.orange{

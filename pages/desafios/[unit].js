@@ -80,6 +80,7 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field1"
+						myref="desafio1_field1"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 1"
@@ -89,6 +90,7 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field2"
+						myref="desafio1_field2"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 2"
@@ -98,6 +100,7 @@ export default function Desafio() {
 						<input
 						type="text"
 						name="field3"
+						myref="desafio1_field3"
 						desafio="1"
 						autoComplete="off"
 						placeholder="Palavra 3"
@@ -118,6 +121,7 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field1"
+							myref="desafio2_field1"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantos Besouros?"
@@ -134,6 +138,7 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field2"
+							myref="desafio2_field2"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantos Côcos?"
@@ -150,6 +155,7 @@ export default function Desafio() {
 							<input
 							type="text"
 							name="field3"
+							myref="desafio2_field3"
 							desafio="2"
 							autoComplete="off"
 							placeholder="Quantas Adagas?"
@@ -170,6 +176,7 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field1"
+								myref="desafio3_field1"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é o Assasino?"
@@ -180,6 +187,7 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field2"
+								myref="desafio3_field2"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field2} >
@@ -199,6 +207,7 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field3"
+								myref="desafio3_field3"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é a Vítima?"
@@ -209,6 +218,7 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field4"
+								myref="desafio3_field4"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field4} >
@@ -228,6 +238,7 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field5"
+								myref="desafio3_field5"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é a Testemunha?"
@@ -238,6 +249,7 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field6"
+								myref="desafio3_field6"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field6} >
@@ -257,6 +269,7 @@ export default function Desafio() {
 								<input
 								type="text"
 								name="field7"
+								myref="desafio3_field7"
 								desafio="3"
 								autoComplete="off"
 								placeholder="Quem é o Cúmplice?"
@@ -267,6 +280,7 @@ export default function Desafio() {
 							<label>Casa
 								<select 
 								name="field8"
+								myref="desafio3_field8"
 								desafio="3"
 								onChange={handleInputChange}
 								value={stateDesafio3.field8} >
