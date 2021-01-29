@@ -75,7 +75,7 @@ export default function Desafio() {
 			<div className="grid">
 
 				<Card card={ {"title": "Desafio 1 - Labirinto", "description": "3 CAMINHOS ao centro vocês devem buscar. Em cada um, uma PALAVRA irá se formar. Se forem espertos, a solução irão encontrar."} }>
-					<Form className="desafio1 block">
+					<Form values={stateDesafio1} myref="desafio1" className="desafio1 block">
 
 						<input
 						type="text"
@@ -195,7 +195,7 @@ export default function Desafio() {
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
-									<option value="AMARELA">AMARELA</option>
+									<option value="GRANDE">GRANDE</option>
 								</select>
 							</label>
 
@@ -226,7 +226,7 @@ export default function Desafio() {
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
-									<option value="AMARELA">AMARELA</option>
+									<option value="GRANDE">GRANDE</option>
 								</select>
 							</label>
 
@@ -257,7 +257,7 @@ export default function Desafio() {
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
-									<option value="AMARELA">AMARELA</option>
+									<option value="GRANDE">GRANDE</option>
 								</select>
 							</label>
 
@@ -288,7 +288,7 @@ export default function Desafio() {
 									<option value="AZUL">AZUL</option>
 									<option value="VERMELHA">VERMELHA</option>
 									<option value="CINZA">CINZA</option>
-									<option value="AMARELA">AMARELA</option>
+									<option value="GRANDE">GRANDE</option>
 								</select>
 							</label>
 

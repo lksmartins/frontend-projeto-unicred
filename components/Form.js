@@ -31,8 +31,10 @@ export default function Form(props) {
         // load button
         setButtonText(loadingButtonText)
 
-        const code = stateValue[e.target[0].name]
-        const myRef = e.target[0].attributes.myref.value
+        const code = props.values ? props.values : e.target[0].value
+        const myRef = props.myref ? props.myref : e.target[0].attributes.myref.value
+
+        console.log(myRef, code)
         
         const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
         method: 'POST',
