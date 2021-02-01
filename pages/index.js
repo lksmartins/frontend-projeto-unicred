@@ -54,9 +54,11 @@ export default function Home() {
               }
               >
               <p>Atenção integrantes da unidade <b>{modalMessage}</b>, ao clicar no botão <b>Confirmar</b>, o seu desafio irá começar!</p>
-              <p>Quanto mais rápido vocês resolverem este desafio, mais vocês irão se destacar. A equipe que resolver estes desafios o mais rápido irá ganhar um prêmio.</p>
-              <p>Se precisarem de ajuda em algum momento, podem mandar um Whatsapp para o número 51.981101419 para pedir uma dica, porém, cada dica irá descontar pontos de vocês na sua pontuação final.</p>
-              <p>Boa sorte.</p>
+
+              <p>Ao clicar em continuar vocês irão começar o seu desafio. Outras equipes do Esquadrão UNICRED também estão fazendo esta atividade, e a equipe que conseguir resolver tudo em menos tempo receberá um prêmio. Portanto, sejam rápidos para vencer.</p>
+              <p>Durante o desafio vocês podem pedir dicas mandando um Whats para o telefone que passamos para vocês na carta. Cada dica solicitada irá aumentar em 5min o tempo final de vocês.</p>
+
+              <p>Boa sorte e bom jogo.</p>
           </Modal>
         </div>
 
