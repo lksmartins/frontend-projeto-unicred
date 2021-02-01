@@ -7,6 +7,7 @@ import Card from '../../components/Card'
 import Timer from '../../components/Timer'
 import Form from '../../components/Form'
 import Modal from '../../components/Modal'
+import Button from '../../components/Button'
 
 export default function Desafio() {
 
@@ -26,6 +27,7 @@ export default function Desafio() {
 	const [stateDesafiosSolved, setDesafiosSolved] = useState(desafiosSolved)
 
 	const [modalShow, setModalShow] = useState(false)
+	const [modalParabens, setModalParabens] = useState(false)
 
 	function handleInputChange(e) {
 
@@ -102,7 +104,7 @@ export default function Desafio() {
 		});
 
 		if( count == Object.keys(stateDesafiosSolved).length ){
-			alert('Todos desafios resolvidos!')
+			setModalParabens(true)
 		}
 
 	}
@@ -126,6 +128,20 @@ export default function Desafio() {
 			</p>
 
 			<div className="grid">
+
+				<Modal 
+				show={modalParabens}
+				onHide={()=>setModalParabens(false)}
+				title="Desafios Concluídos!"
+				footer={
+					<>
+					<Button className="button red left" onClick={()=>setModalParabens(false)}><i className="fas fa-times-circle"/> Fechar</Button>
+					<Button onClick={()=>router.push('/parabens')}><i className="fas fa-check-circle"/> Continuar</Button>
+					</>
+				  }
+					>
+					<p>Parabéns. Todos os desafios foram solucionados!</p>
+				</Modal>
 
 				<Modal 
 				show={modalShow}
