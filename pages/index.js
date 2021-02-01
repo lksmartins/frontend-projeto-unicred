@@ -31,7 +31,7 @@ export default function Home() {
       <main className="main">
 
         <h1 className="title">
-          Esquadrão <Link href="/desafios"><a>Unicred</a></Link>
+          Esquadrão <Link href="/"><a>Unicred</a></Link>
         </h1>
 
         <p className="description">
