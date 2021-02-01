@@ -1,8 +1,7 @@
-import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Parabens() {
+export default function DesafioConcluido() {
 
   return (
     <div className="container">
@@ -17,20 +16,8 @@ export default function Parabens() {
         </h1>
 
         <p className="description">
-            Parabéns, vocês agora fazem parte do Esquadrão Unicred.
+          O desafio dessa unidade já foi concluído.
         </p>
-
-        <div className="grid fill">
-            <p className="code">
-                Imagem
-            </p>
-            <p>
-                Agora vocês precisam coletar sua recompensa <b>individual</b>. Utilizem o cartão com a senha pessoal que receberam e acessem o link: 
-            </p>
-            <h3>
-                <Link href="/recompensa"><a>www.esquadraounicred.com.br/recompensa</a></Link>
-            </h3>
-        </div>
 
       </main>
 

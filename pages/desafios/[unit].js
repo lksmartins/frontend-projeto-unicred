@@ -29,6 +29,11 @@ export default function Desafio() {
 	const [modalShow, setModalShow] = useState(false)
 	const [modalParabens, setModalParabens] = useState(false)
 
+	const [stateTimeEnd, setTimeEnd] = useState(false)
+
+	const [buttonText, setButtonText] = useState(<i className="fas fa-spin fa-spinner"/>)
+	const [buttonDisabled, setButtonDisabled] = useState('disabled')
+
 	function handleInputChange(e) {
 
 		const target = e.target
@@ -86,11 +91,19 @@ export default function Desafio() {
 
         checkSolved()
 
-    }, [stateDesafiosSolved])
+	}, [stateDesafiosSolved])
+	
+	useEffect(() => {
+
+		console.log('isTimeEnded changed')
+		if( stateTimeEnd ){
+			setButtonText(<><i className="fas fa-check-circle"/> Continuar</>)
+			setButtonDisabled('')
+		}
+
+	}, [stateTimeEnd])
 
 	function checkSolved(){
-
-		console.log('checkSolved')
 
 		let count = 0
 
@@ -104,10 +117,31 @@ export default function Desafio() {
 		});
 
 		if( count == Object.keys(stateDesafiosSolved).length ){
+			setEndTime()
 			setModalParabens(true)
 		}
 
 	}
+
+	async function setEndTime(){
+
+        const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
+            method: 'POST',
+            body: JSON.stringify({ 
+                token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
+                action: 'end_time',
+
+                unit: unit
+            })
+        })
+
+        const response = await res.json()
+
+		console.log(response)
+		
+		setTimeEnd(true)
+
+    }
 
 	return (
 		<div className="container">
@@ -136,7 +170,7 @@ export default function Desafio() {
 				footer={
 					<>
 					<Button className="button red left" onClick={()=>setModalParabens(false)}><i className="fas fa-times-circle"/> Fechar</Button>
-					<Button onClick={()=>router.push('/parabens')}><i className="fas fa-check-circle"/> Continuar</Button>
+					<Button disabled={buttonDisabled} onClick={()=>router.push('/parabens')}>{buttonText}</Button>
 					</>
 				  }
 					>

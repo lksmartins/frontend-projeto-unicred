@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Timer(props) {
+
+    const router = useRouter()
 
     const code = props.unit
 
     const loadingTimerText = <i className="fas fa-spin fa-spinner"/>
-
     const [timerText, setTimerText] = useState(loadingTimerText)
-
     const [loadedDate, setLoadedDate] = useState(null)
     
     async function loadTime(){
@@ -31,6 +32,11 @@ export default function Timer(props) {
         //setTimerText(response.ref)
 
         setLoadedDate(response.start)
+
+        // acabou o tempo
+        if( response.end !== '0000-00-00 00:00:00' ){
+            router.push('/desafio-concluido')
+        }
 
     }
 
