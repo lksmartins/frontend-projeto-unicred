@@ -63,7 +63,11 @@ export default function TimerButton(props) {
 
     return(
 
-        <button disabled={buttonDisabled === '' && props.disabled ? props.disabled : buttonDisabled} className={props.className ? props.className : "button button-timer" }>
+        <button 
+        disabled={buttonDisabled === '' && props.disabled ? props.disabled : buttonDisabled} 
+        className={props.className ? props.className : "button button-timer" }
+        onClick={ props.onClick ? props.onClick : ()=>{} }
+        >
             { !autoStart ? props.children : timerText }
         </button>
 

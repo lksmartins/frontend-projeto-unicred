@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import Modal from '../components/Modal'
 import Form from '../components/Form'
 import Button from '../components/Button'
+import TimerButton from '../components/TimerButton'
 
 export default function Home() {
 
@@ -65,7 +66,7 @@ export default function Home() {
               footer={
                 <>
                 <Button className="button red left" onClick={()=>setModalShow(false)}><i className="fas fa-times-circle"/> Fechar</Button>
-                <Button onClick={()=>router.push(`desafios/${unitCode.toUpperCase()}`)}><i className="fas fa-check-circle"/> Confirmar</Button>
+                <TimerButton onClick={()=>router.push(`desafios/${unitCode.toUpperCase()}`)} time={10} start={modalShow}><i className="fas fa-check-circle"/> Confirmar</TimerButton>
                 </>
               }
               >
