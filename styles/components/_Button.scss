@@ -16,6 +16,17 @@
         i{color: $corp-accent;}
     }
 
+    &:disabled{
+        background: rgba(black, 0.5);
+        color: white;
+        i{color: white;}
+
+        &:hover{
+            background: rgba(black, 0.5);
+            cursor: not-allowed;
+        }
+    }
+
     &:hover{
         background: black;
     }

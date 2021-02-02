@@ -206,6 +206,20 @@ button:focus {
   color: #00A3FF;
 }
 
+.button:disabled {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.button:disabled i {
+  color: white;
+}
+
+.button:disabled:hover {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
 .button:hover {
   background: black;
 }

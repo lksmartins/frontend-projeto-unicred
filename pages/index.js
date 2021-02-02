@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -21,6 +21,12 @@ export default function Home() {
   const [modalShow, setModalShow] = useState(false)
   const [modalMessage, setModalMessage] = useState('Mensagem padrão')
   const [unitCode, setUnitCode] = useState()
+  const [timerStart, setTimerStart] = useState(false)
+
+  useEffect(() => {
+    console.log('timerStart')
+    console.log(timerStart)
+  })
 
   return (
     <div className="container">
@@ -40,7 +46,17 @@ export default function Home() {
 
         <div className="grid fill">
           <Card key={card.ref} card={card}>
-            <Form id={card.ref} api_action="code_timer" modalSet={setModalShow} modalMessage={setModalMessage} inputBack={setUnitCode}/>
+            <p className="code" onClick={()=>{setTimerStart(true)}}>
+                Video
+            </p>
+            <Form 
+            id={card.ref} 
+            api_action="code_timer" 
+            modalSet={setModalShow} 
+            modalMessage={setModalMessage} 
+            inputBack={setUnitCode}
+            timerbutton={{ time:10, start:timerStart }}
+            />
           </Card>
           <Modal 
               show={modalShow}

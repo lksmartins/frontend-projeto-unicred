@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Modal from './Modal'
+import TimerButton from './TimerButton'
 
 export default function Form(props) {
 
@@ -14,9 +15,6 @@ export default function Form(props) {
     const [buttonText, setButtonText] = useState(defaultButtonText)
     const [buttonClass, setButtonClass] = useState("button")
     const [buttonDisabled, setButtonDisabled] = useState("")
-    
-
-    const button = useRef(null)
 
     function handleInputChange(e) {
 
@@ -86,7 +84,13 @@ export default function Form(props) {
                 onChange={handleInputChange}
                 value={stateValue[props.id]}/>
             }
-            <button ref={button} className={buttonClass} disabled={buttonDisabled} type="submit">{buttonText}</button>
+            {
+                props.timerbutton ?
+                <TimerButton time={props.timerbutton.time} start={props.timerbutton.start} className={buttonClass} disabled={buttonDisabled} type="submit">{buttonText}</TimerButton>
+                :
+                <button className={buttonClass} disabled={buttonDisabled} type="submit">{buttonText}</button> 
+            }
+            
 
             <Modal 
                 show={modalShow}

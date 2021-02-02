@@ -54,7 +54,7 @@ export default function Timer(props) {
         }
       }
     
-      return `${ timeLeft.hours > 9 ? timeLeft.hours : "0"+timeLeft.hours}:${timeLeft.minutes > 10 ? timeLeft.minutes : "0"+timeLeft.minutes }:${ timeLeft.seconds > 9 ? timeLeft.seconds : "0"+timeLeft.seconds }`
+      return `${ timeLeft.hours > 9 ? timeLeft.hours : "0"+timeLeft.hours}:${timeLeft.minutes > 9 ? timeLeft.minutes : "0"+timeLeft.minutes }:${ timeLeft.seconds > 9 ? timeLeft.seconds : "0"+timeLeft.seconds }`
     }
 
     useEffect(() => {
