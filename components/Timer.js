@@ -10,6 +10,7 @@ export default function Timer(props) {
     const loadingTimerText = <i className="fas fa-spin fa-spinner"/>
     const [timerText, setTimerText] = useState(loadingTimerText)
     const [loadedDate, setLoadedDate] = useState(null)
+    const [loadedTime, setLoadedTime] = useState(null)
     
     async function loadTime(){
 
@@ -29,15 +30,8 @@ export default function Timer(props) {
 
         console.log(response)
 
-        //setTimerText(response.ref)
-
         setLoadedDate(response.start)
-
-        // acabou o tempo
-        if( response.end !== '0000-00-00 00:00:00' ){
-            router.push('/desafio-concluido')
-        }
-
+        setLoadedTime(response)
     }
 
     function calculateTimeLeft(){
@@ -60,6 +54,13 @@ export default function Timer(props) {
     useEffect(() => {
 
         loadTime()
+
+        // acabou o tempo
+        if( loadedTime != null && loadedTime != undefined ){
+            if( loadedTime.end != "0000-00-00 00:00:00" && loadedTime.end != undefined ){
+                router.push('/desafio-concluido')
+            }
+        }
 
         const timer = setTimeout(() => {
             setTimerText( calculateTimeLeft() )
