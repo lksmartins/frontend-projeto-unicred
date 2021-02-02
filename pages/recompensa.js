@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 import Card from '../components/Card'
 import Form from '../components/Form'
@@ -13,10 +12,6 @@ export default function Recompensa() {
       </Head>
 
       <main className="main">
-
-        <h1 className="title">
-          Esquadrão <Link href="/"><a>Unicred</a></Link>
-        </h1>
 
         <p className="description">
           Recompensa

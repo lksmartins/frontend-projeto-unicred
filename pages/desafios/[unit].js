@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import Card from '../../components/Card'
@@ -153,12 +152,8 @@ export default function Desafio() {
 
 			<Timer unit={unit} />
 
-			<h1 className="title">
-			Esquadrão <Link href="/"><a>Unicred</a></Link>
-			</h1>
-
 			<p className="description">
-			Desafios - {unit}
+				Desafios - {unit}
 			</p>
 
 			<div className="grid">

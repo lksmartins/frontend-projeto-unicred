@@ -12,10 +12,6 @@ export default function Parabens() {
 
       <main className="main">
 
-        <h1 className="title">
-          Esquadrão <Link href="/"><a>Unicred</a></Link>
-        </h1>
-
         <p className="description">
             Parabéns, vocês agora fazem parte do Esquadrão Unicred.
         </p>

@@ -1,0 +1,19 @@
+.header{
+
+    display: flex;
+    width: 100%;
+    margin-bottom: -80px;
+    min-height: 20vh;
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+
+        img{max-width:50vw;}
+    }
+
+}

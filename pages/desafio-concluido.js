@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function DesafioConcluido() {
 
@@ -10,10 +9,6 @@ export default function DesafioConcluido() {
       </Head>
 
       <main className="main">
-
-        <h1 className="title">
-          Esquadrão <Link href="/"><a>Unicred</a></Link>
-        </h1>
 
         <p className="description">
           O desafio dessa unidade já foi concluído.

@@ -41,7 +41,7 @@ button:focus {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,8 +60,10 @@ button:focus {
 
 .main {
   padding: 5rem 0;
+  padding-top: 0;
   margin: 0 auto;
   max-width: 1200px;
+  width: 80%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -72,9 +74,9 @@ button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -134,7 +136,7 @@ button:focus {
 }
 
 .code {
-  background: #fafafa;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -178,6 +180,34 @@ button:focus {
 #recompensa .main .grid .card {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: -80px;
+  min-height: 20vh;
+}
+
+.header .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header .content img {
+  max-width: 50vw;
 }
 
 .button {

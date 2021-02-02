@@ -37,10 +37,6 @@ export default function Home() {
 
       <main className="main">
 
-        <h1 className="title">
-          Esquadrão <Link href="/"><a>Unicred</a></Link>
-        </h1>
-
         <p className="description">
            Bem-Vindo à seleção do Esquadrão UNICRED.
         </p>
