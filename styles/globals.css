@@ -82,6 +82,10 @@ button:focus {
           align-items: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 .footer {
   width: 100%;
   border-top: 1px solid #eaeaea;

@@ -169,6 +169,9 @@ export default function Desafio() {
 					</>
 				  }
 					>
+					<p>
+						<img src="/imgs/cooperado.webp" />
+					</p>
 					<p>Parabéns. Todos os desafios foram solucionados!</p>
 				</Modal>
 

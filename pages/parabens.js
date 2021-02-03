@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Parabens() {
 
@@ -13,19 +12,22 @@ export default function Parabens() {
       <main className="main">
 
         <p className="description">
-            Parabéns, vocês agora fazem parte do Esquadrão Unicred.
+          Parabéns Esquadrão Unicred!
         </p>
 
         <div className="grid fill">
-            <p className="code">
-                Imagem
+            <p>
+              Vocês conseguiram conquistar o “Cooperado Mais Difícil do Mundo.”
             </p>
             <p>
-                Agora vocês precisam coletar sua recompensa <b>individual</b>. Utilizem o cartão com a senha pessoal que receberam e acessem o link: 
+                <img src="/imgs/cooperado.webp" />
             </p>
-            <h3>
-                <Link href="/recompensa"><a>www.esquadraounicred.com.br/recompensa</a></Link>
-            </h3>
+            <p>
+              Através do jeito Eleva de ser, ao se IMPORTAR genuinamente em conquistar este cooperado, superando os desafios com ética, colaboração e aprendizado contínuo, vocês fizeram acontecer e provaram que juntos podem vencer e conquistar até mesmo o “Cooperado Mais Difícil do Mundo”.
+            </p>
+            <p>
+              Ele ficou tão encantado com o trabalho de vocês, que irá lhes dar uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar o cartão com sua senha pessoal. 
+            </p>
         </div>
 
       </main>
