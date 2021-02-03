@@ -28,6 +28,10 @@ export default function Parabens() {
             <p>
               Ele ficou tão encantado com o trabalho de vocês, que irá lhes dar uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar o cartão com sua senha pessoal. 
             </p>
+            <p>
+              Para acessar a sua recompensa individual acesse o link abaixo:
+            </p>
+            <h3>www.esquadraounicred.com.br/recompensa</h3>
         </div>
 
       </main>
