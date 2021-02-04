@@ -712,6 +712,7 @@ img {
   font-size: 2rem;
   padding: 5px 12px;
   border-radius: 10px;
+  border: 1px solid white;
   background: #104330;
   color: white;
   min-width: 170px;

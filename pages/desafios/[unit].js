@@ -265,14 +265,14 @@ export default function Desafio() {
 						<div className="line">
 
 							<div className="img-wrapper">
-								<img src="/imgs/desafio2/field1.png" />
+								<img src="/imgs/desafio2/field1.jpg" />
 							</div>
 							<input
 							type="text"
 							name="field1"
 							desafio="2"
 							autoComplete="off"
-							placeholder="Quantos Besouros?"
+							placeholder="Quantas Geléias de Morango?"
 							onChange={handleInputChange}
 							value={stateDesafio2.field1}/>
 
@@ -281,14 +281,14 @@ export default function Desafio() {
 						<div className="line">
 
 							<div className="img-wrapper">
-								<img src="/imgs/desafio2/field2.png" />
+								<img src="/imgs/desafio2/field2.jpg" />
 							</div>
 							<input
 							type="text"
 							name="field2"
 							desafio="2"
 							autoComplete="off"
-							placeholder="Quantos Côcos?"
+							placeholder="Quantas Abóboras?"
 							onChange={handleInputChange}
 							value={stateDesafio2.field2}/>
 
@@ -297,14 +297,14 @@ export default function Desafio() {
 						<div className="line">
 
 							<div className="img-wrapper">
-								<img src="/imgs/desafio2/field3.png" />
+								<img src="/imgs/desafio2/field3.jpg" />
 							</div>
 							<input
 							type="text"
 							name="field3"
 							desafio="2"
 							autoComplete="off"
-							placeholder="Quantas Adagas?"
+							placeholder="Quantas Galinhas?"
 							onChange={handleInputChange}
 							value={stateDesafio2.field3}/>
 

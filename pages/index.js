@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Link from 'next/link'
 
 import Card from '../components/Card'
 import Modal from '../components/Modal'
@@ -23,11 +22,6 @@ export default function Home() {
   const [modalMessage, setModalMessage] = useState('Mensagem padrão')
   const [unitCode, setUnitCode] = useState()
   const [timerStart, setTimerStart] = useState(false)
-
-  useEffect(() => {
-    console.log('timerStart')
-    console.log(timerStart)
-  })
 
   return (
     <div className="container">
