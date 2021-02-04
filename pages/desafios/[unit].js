@@ -33,6 +33,31 @@ export default function Desafio() {
 	const [buttonText, setButtonText] = useState(<i className="fas fa-spin fa-spinner"/>)
 	const [buttonDisabled, setButtonDisabled] = useState('disabled')
 
+	const [unitName, setUnitName] = useState('')
+
+	async function getUnitName(){
+
+		console.log('getUnitName')
+
+        if( unitName != '' ){ return }
+
+        const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
+            method: 'POST',
+            body: JSON.stringify({ 
+                token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
+                action: 'code_timer',
+
+                code: unit
+            })
+        })
+
+        const response = await res.json()
+
+        console.log(response)
+
+        setUnitName(response.unit)
+	}
+
 	function handleInputChange(e) {
 
 		const target = e.target
@@ -102,6 +127,12 @@ export default function Desafio() {
 
 	}, [stateTimeEnd])
 
+	useEffect(() => {
+
+		getUnitName()
+
+	})
+
 	function checkSolved(){
 
 		let count = 0
@@ -153,7 +184,7 @@ export default function Desafio() {
 			<Timer unit={unit} />
 
 			<p className="description">
-				Desafios - {unit}
+				Desafios - {unitName}
 			</p>
 
 			<div className="grid">

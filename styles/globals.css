@@ -67,7 +67,7 @@ button:focus {
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   padding-top: 0;
   margin: 0 auto;
   max-width: 960px;
@@ -167,7 +167,7 @@ img {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -189,6 +189,7 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 1rem;
   }
 }
 
@@ -226,6 +227,12 @@ img {
 
 .header .content img {
   max-width: 50vw;
+}
+
+@media (max-width: 800px) {
+  .header {
+    margin-bottom: -50px;
+  }
 }
 
 .button {
