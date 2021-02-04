@@ -17,10 +17,10 @@ export default function Parabens() {
 
         <div className="grid fill">
             <p>
-              Vocês conseguiram conquistar o “Cooperado Mais Difícil do Mundo.”
+                <img className="rounded" src="/imgs/trophy.gif" />
             </p>
             <p>
-                <img src="/imgs/cooperado.webp" />
+              Vocês conseguiram conquistar o “Cooperado Mais Difícil do Mundo.”
             </p>
             <p>
               Através do jeito Eleva de ser, ao se IMPORTAR genuinamente em conquistar este cooperado, superando os desafios com ética, colaboração e aprendizado contínuo, vocês fizeram acontecer e provaram que juntos podem vencer e conquistar até mesmo o “Cooperado Mais Difícil do Mundo”.

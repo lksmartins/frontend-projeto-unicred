@@ -15,8 +15,8 @@ export default function Home() {
 
   const card = {
     ref: 'desafio_0',
-    title: 'Desafio Inicial',
-    description: 'Na mensagem no envelope de vocês há uma senha escondida, digite esta senha, que é uma PALAVRA, no campo abaixo. Este é o seu primeiro desafio.'
+    title: 'Bem-vindo Esquadrão Unicred',
+    description: 'Assista ao video abaixo para conhecer sua missão. Em seguida, resolva seu primeiro desafio: Verifiquem no envelope de vocês e encontrem uma senha escondida, digite esta senha, que é uma PALAVRA, no campo abaixo.'
   }
 
   const [modalShow, setModalShow] = useState(false)
@@ -36,10 +36,6 @@ export default function Home() {
       </Head>
 
       <main className="main">
-
-        <p className="description">
-           Bem-Vindo à seleção do Esquadrão UNICRED.
-        </p>
 
         <div className="grid fill">
           <Card key={card.ref} card={card}>
@@ -68,7 +64,7 @@ export default function Home() {
               >
               <p>Atenção integrantes da unidade <b>{modalMessage}</b>, ao clicar no botão <b>Confirmar</b>, o seu desafio irá começar!</p>
 
-              <p>Ao clicar em Confirmar vocês irão começar o seu desafio. Outras equipes do Esquadrão UNICRED também estão fazendo esta atividade, e a equipe que conseguir resolver tudo em menos tempo receberá um prêmio. Portanto, sejam rápidos para vencer.</p>
+              <p>Outras equipes do Esquadrão UNICRED também estão fazendo esta atividade, e a equipe que conseguir resolver tudo em menos tempo receberá um prêmio. Portanto, sejam rápidos para vencer.</p>
               <p>Durante o desafio vocês podem pedir dicas mandando um Whats para o telefone que passamos para vocês na carta. Cada dica solicitada irá aumentar em 5min o tempo final de vocês.</p>
 
               <p>Boa sorte e bom jogo.</p>

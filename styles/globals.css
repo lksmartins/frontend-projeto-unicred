@@ -840,4 +840,9 @@ img {
   margin: 0 !important;
   margin-top: 6px !important;
 }
+
+.rounded {
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+}
 /*# sourceMappingURL=globals.css.map */

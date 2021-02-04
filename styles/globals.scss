@@ -10,3 +10,8 @@
 @import './components/_Modal.scss';
 @import './components/_Timer.scss';
 @import './components/_Form.scss';
+
+.rounded{
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
