@@ -10,12 +10,6 @@
 
     i{transition: all 0.3s ease;}
 
-    &:hover{
-        background: rgba($corp-accent, 0.3);
-        color: $corp-accent;
-        i{color: $corp-accent;}
-    }
-
     &:disabled{
         background: rgba(black, 0.5);
         color: white;

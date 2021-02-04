@@ -16,16 +16,19 @@
     input{
         
         &:nth-of-type(1){
-            border: 2px solid #00B08F;
-            color: #00B08F;
+            border: 2px solid #A1C463;
+            color: #A1C463;
+            background: rgba(#A1C463, 0.2);
         }
         &:nth-of-type(2){
-            border: 2px solid #FFC000;
-            color: #FFC000;
+            border: 2px solid #F39649;
+            color: #F39649;
+            background: rgba(#F39649, 0.2);
         }
         &:nth-of-type(3){
-            border: 2px solid #3A70C0;
-            color: #3A70C0;
+            border: 2px solid #5188BC;
+            color: #5188BC;
+            background: rgba(#5188BC, 0.2);
         }
     }
 }
