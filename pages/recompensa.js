@@ -29,10 +29,6 @@ export default function Recompensa() {
 
       <main className="main">
 
-        <p className="description">
-          Recompensa
-        </p>
-
         <Modal 
           show={modalShow}
           onHide={()=>setModalShow(false)}
@@ -67,7 +63,7 @@ export default function Recompensa() {
 				</Modal>
 
         <div className="grid">
-            <Card card={{'title':'Título Exemplo', 'description':'Descrição Exemplo', 'ref':'recompensa'}}>
+            <Card card={{'title':'Recompensa', 'description':'Digite sua senha abaixo:', 'ref':'recompensa'}}>
               <Form 
                 id="recompensa"
                 api_action="pass_check" 
