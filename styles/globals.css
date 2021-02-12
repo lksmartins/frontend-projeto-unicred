@@ -35,7 +35,7 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #104330;
+  border-color: #0F4431;
   outline: none;
 }
 
@@ -198,6 +198,32 @@ img {
       flex-basis: 100%;
 }
 
+.modal .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.modal .content span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal .content span span {
+  margin-left: 6px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +262,7 @@ img {
 }
 
 .button {
-  background: #104330;
+  background: #0F4431;
   border-radius: 4px;
   color: white;
   border: none;
@@ -267,7 +293,7 @@ img {
 }
 
 .button:hover {
-  background: black;
+  background: #AC934C;
 }
 
 .button.solved {
@@ -373,8 +399,8 @@ img {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #104330;
-  border-color: #104330;
+  color: #0F4431;
+  border-color: #0F4431;
 }
 
 .card h3 {
@@ -548,7 +574,7 @@ img {
 
 .modal-content .title {
   font-size: 26px;
-  color: #104330;
+  color: #0F4431;
   text-align: left;
   font-weight: bold;
   padding: 0;
@@ -713,7 +739,7 @@ img {
   padding: 5px 12px;
   border-radius: 10px;
   border: 1px solid white;
-  background: #104330;
+  background: #0F4431;
   color: white;
   min-width: 170px;
   text-align: center;
@@ -846,5 +872,17 @@ img {
 .rounded {
   border-radius: 10px;
   border: 1px solid #eaeaea;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=globals.css.map */

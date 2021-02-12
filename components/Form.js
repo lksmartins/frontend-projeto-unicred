@@ -57,10 +57,16 @@ export default function Form(props) {
             props.modalMessage ? props.modalMessage(response.unit) : null
             props.inputBack ? props.inputBack(code) : null
             props.callback ? props.callback(myRef) : null
-    
-            setButtonText("Solucionado")
-            setButtonClass("button solved")
-            setButtonDisabled("disabled")
+            props.response ? props.response(response.message) : null
+            
+            if( props.change_btn && props.change_btn == true ){
+                setButtonText("Solucionado")
+                setButtonClass("button solved")
+                setButtonDisabled("disabled")
+            }
+            else{
+                setButtonText(defaultButtonText)
+            }
         }
         else{
             setShowMessage(response.message)

@@ -185,6 +185,8 @@ export default function Desafio() {
 
 			<p className="description">
 				Desafios - {unitName}
+				<br/>
+				Solucionem os 3 desafios para conquistar o cooperado mais difícil do mundo!
 			</p>
 
 			<div className="grid">
@@ -221,6 +223,7 @@ export default function Desafio() {
 					className="desafio1 block"
 					callback={desafioSolved}
 					modalSet={setModalShow}
+					change_btn={true}
 					>
 
 						<input
@@ -260,6 +263,7 @@ export default function Desafio() {
 					className="desafio2"
 					callback={desafioSolved}
 					modalSet={setModalShow}
+					change_btn={true}
 					>
 
 						<div className="line">
@@ -320,6 +324,7 @@ export default function Desafio() {
 					className="desafio3"
 					callback={desafioSolved}
 					modalSet={setModalShow}
+					change_btn={true}
 					>
 
 						<div className="line">
