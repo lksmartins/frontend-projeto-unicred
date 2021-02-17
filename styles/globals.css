@@ -242,6 +242,17 @@ img {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   padding: 0 20px;
+}
+
+#parabens .grid .col.left {
+  padding-left: 0;
+}
+
+#parabens .grid .col.right {
+  padding-right: 0;
+}
+
+#parabens .grid .audio {
   margin-bottom: 50px;
 }
 

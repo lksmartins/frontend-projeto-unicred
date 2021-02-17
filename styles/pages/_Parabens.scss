@@ -7,6 +7,16 @@
         .col{
             flex-basis: 48%;
             padding: 0 20px;
+
+            &.left{
+                padding-left: 0;
+            }
+            &.right{
+                padding-right: 0;
+            }
+        }
+
+        .audio{
             margin-bottom: 50px;
         }
     }
