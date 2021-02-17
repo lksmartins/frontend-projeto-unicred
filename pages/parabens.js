@@ -9,6 +9,7 @@ import Modal from '../components/Modal'
 export default function Parabens() {
 
   const [modalShow, setModalShow] = useState(true)
+  let played = false
 
     useEffect(() => {
 
@@ -16,11 +17,16 @@ export default function Parabens() {
 
             const audio = document.querySelector('.audio audio')
 
-            audio.play()
+            console.log(played)
+
+            if( played === false ){
+              audio.play()
+              played = true
+            }
 
         })
 
-    })
+    }, [])
 
   return (
     <div className="container" id="parabens">
