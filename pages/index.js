@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import ReactPlayer from 'react-player'
 
 import Card from '../components/Card'
 import Modal from '../components/Modal'
@@ -33,16 +34,26 @@ export default function Home() {
 
         <div className="grid fill">
           <Card key={card.ref} card={card}>
-            <p className="code" onClick={()=>{setTimerStart(true)}}>
-                Video
-            </p>
+            <ReactPlayer onClick={()=>{setTimerStart(true)}}
+                id="video_player"
+                className="video" 
+                url="https://www.youtube.com/watch?v=T2_yFfCurfA"
+                loop={false}
+                playing={true}
+                muted={false}
+                light={true}
+                onPause={()=>{console.log("onPause")}}
+                onPlay={()=>{console.log("onPlay")}}
+                width={880}
+                height={495}
+            />
             <Form 
             id={card.ref} 
             api_action="code_timer" 
             modalSet={setModalShow} 
             modalMessage={setModalMessage} 
             inputBack={setUnitCode}
-            timerbutton={{ time:10, start:timerStart }}
+            timerbutton={{ time:146, start:timerStart }}
             />
           </Card>
           <Modal 

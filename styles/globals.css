@@ -179,6 +179,10 @@ img {
   height: 10em;
 }
 
+#video_player {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 800px) {
   .grid {
     width: 100%;
@@ -222,6 +226,23 @@ img {
   margin-left: 6px;
   font-weight: bold;
   margin-bottom: 0;
+}
+
+#parabens .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#parabens .grid .col {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  padding: 0 20px;
+  margin-bottom: 50px;
 }
 
 .header {
