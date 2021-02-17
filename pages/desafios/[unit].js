@@ -19,7 +19,8 @@ export default function Desafio() {
 	const desafio2 = {field1:"", field2:"", field3:""}
 	const [stateDesafio2, setDesafio2] = useState(desafio2)
 
-	const desafio3 = {field1:"caroline", field2:"CINZA", field3:"antonio", field4:"GRANDE", field5:"fernanda", field6:"VERMELHA", field7:"luis", field8:"AZUL"}
+	//const desafio3 = {field1:"caroline", field2:"CINZA", field3:"antonio", field4:"GRANDE", field5:"fernanda", field6:"VERMELHA", field7:"luis", field8:"AZUL"}
+	const desafio3 = {field1:"", field2:"", field3:"", field4:"", field5:"", field6:"", field7:"", field8:""}
 	const [stateDesafio3, setDesafio3] = useState(desafio3)
 
 	const desafiosSolved = {"desafio1":false, "desafio2":false, "desafio3":false }
@@ -317,7 +318,13 @@ export default function Desafio() {
 					</Form>
 				</Card>
 
-				<Card card={ {"title": "Desafio 3 - Evidências", "description": "Um crime foi cometido e houve uma confusão nas evidências encontradas. Organize as evidências e nos ajude a identificar quem é quem e onde vivem o assassino, vítima, cúmplice e testemunda deste caso."} }>
+				<Card card={{
+						"title": "Desafio 3 - Evidências", 
+						"description": <>
+						<p>Um crime foi cometido e houve uma confusão nas evidências encontradas. Organize as evidências e nos ajude a identificar quem é quem e onde vivem o assassino, vítima, cúmplice e testemunda deste caso.</p>
+						<p>Posicionem as fichas dos suspeitos e suas características na ficha de suspeitos. As fichas de mesma cor, pertencem ao suspeito. As fichas de casa não se sabe ainda a qual suspeito pertence, cabe a vocês descubrirem. Primeiro descubram a posição em que cada suspeito mora e ao final posicionem a casa de cada suspeito.</p>
+						</>
+						} }>
 					<Form 
 					values={stateDesafio3} 
 					myref="desafio3" 
