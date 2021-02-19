@@ -5,36 +5,37 @@ import 'react-table-6/react-table.css'
 
 import Card from '../components/Card'
 
+export async function getServerSideProps(context) {
+
+    const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
+        method: 'POST',
+        body: JSON.stringify({ 
+            token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
+            action: 'times'
+        })
+    })
+
+    const response = await res.json()
+
+    return {
+        props: {times: response}, // will be passed to the page component as props
+    }
+}
+
 export default function Ranking(props) {
 
-	async function setEndTime(){
+    const { times } = props
 
-        const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
-            method: 'POST',
-            body: JSON.stringify({ 
-                token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
-                action: 'end_time',
-
-                unit: unit
-            })
-        })
-
-        const response = await res.json()
-
-		console.log(response)
-		
-		setTimeEnd(true)
-
-    }
+    console.log(times)
 
     const data = [
-        {unit: 'CAMPO GRANDE', time: '01:06'},
-        {unit: 'CRUZ ALTA', time: '01:50'},
-        {unit: 'REGIONAL', time: '02:26'},
-        {unit: 'SANTA ROSA', time: '00:56'},
-        {unit: 'SANTO ÂNGELO', time: '00:47'},
-        {unit: 'SÃO BORJA', time: '01:36'},
-        {unit: 'SÃO LUIZ', time: '01:02'}
+        {unit: 'CAMPO GRANDE', time: times['CAMPO GRANDE']},
+        {unit: 'CRUZ ALTA', time: times['CRUZ ALTA']},
+        {unit: 'REGIONAL', time: times['REGIONAL']},
+        {unit: 'SANTA ROSA', time: times['SANTA ROSA']},
+        {unit: 'SANTO ÂNGELO', time: times['SANTO ÂNGELO']},
+        {unit: 'SÃO BORJA', time: times['SÃO BORJA']},
+        {unit: 'SÃO LUIZ', time: times['SÃO LUIZ']}
     ]
 
     const columns = [{
