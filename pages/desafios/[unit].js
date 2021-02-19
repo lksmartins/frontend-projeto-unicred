@@ -27,9 +27,22 @@ export async function getStaticProps(context){
 
 	const unit = context.params.unit
 
+	const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
+		method: 'POST',
+		body: JSON.stringify({ 
+			token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
+			action: 'code_timer',
+
+			code: unit
+		})
+	})
+
+	const response = await res.json()
+
 	return {
 		props: {
-			unit: unit
+			unit: unit,
+			unitName: response.unit
 		}
 	}
 }
@@ -37,7 +50,7 @@ export async function getStaticProps(context){
 export default function Desafio(props) {
 
 	const router = useRouter()
-	const { unit } = props
+	const { unit, unitName } = props
 
 	const desafio1 = {field1:"", field2:"", field3:""}
 	const [stateDesafio1, setDesafio1] = useState(desafio1)
@@ -59,31 +72,6 @@ export default function Desafio(props) {
 
 	const [buttonText, setButtonText] = useState(<i className="fas fa-spin fa-spinner"/>)
 	const [buttonDisabled, setButtonDisabled] = useState('disabled')
-
-	const [unitName, setUnitName] = useState('')
-
-	async function getUnitName(){
-
-		console.log('getUnitName')
-
-        if( unitName != '' ){ return }
-
-        const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
-            method: 'POST',
-            body: JSON.stringify({ 
-                token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
-                action: 'code_timer',
-
-                code: unit
-            })
-        })
-
-        const response = await res.json()
-
-        console.log(response)
-
-        setUnitName(response.unit)
-	}
 
 	function handleInputChange(e) {
 
@@ -153,12 +141,6 @@ export default function Desafio(props) {
 		}
 
 	}, [stateTimeEnd])
-
-	useEffect(() => {
-
-		getUnitName()
-
-	})
 
 	function checkSolved(){
 
