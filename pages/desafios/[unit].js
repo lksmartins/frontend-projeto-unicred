@@ -8,10 +8,36 @@ import Form from '../../components/Form'
 import Modal from '../../components/Modal'
 import Button from '../../components/Button'
 
-export default function Desafio() {
+export async function getStaticPaths() {
+	return {
+	  paths: [
+		{ params: { unit: 'DESAFIO' } },
+		{ params: { unit: 'ACESSO' } },
+		{ params: { unit: 'ENTRADA' } },
+		{ params: { unit: 'UNIDADE' } },
+		{ params: { unit: 'FUTURO' } },
+		{ params: { unit: 'AGORA' } },
+		{ params: { unit: 'PRESENTE' } }
+	  ],
+	  fallback: false
+	}
+  }
+
+export async function getStaticProps(context){
+
+	const unit = context.params.unit
+
+	return {
+		props: {
+			unit: unit
+		}
+	}
+}
+
+export default function Desafio(props) {
 
 	const router = useRouter()
-	const { unit } = router.query
+	const { unit } = props
 
 	const desafio1 = {field1:"", field2:"", field3:""}
 	const [stateDesafio1, setDesafio1] = useState(desafio1)
