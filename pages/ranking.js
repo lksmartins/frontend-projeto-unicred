@@ -26,16 +26,14 @@ export default function Ranking(props) {
 
     const { times } = props
 
-    console.log(times)
-
     const data = [
-        {unit: 'CAMPO GRANDE', time: times['CAMPO GRANDE']},
-        {unit: 'CRUZ ALTA', time: times['CRUZ ALTA']},
-        {unit: 'REGIONAL', time: times['REGIONAL']},
-        {unit: 'SANTA ROSA', time: times['SANTA ROSA']},
-        {unit: 'SANTO ÂNGELO', time: times['SANTO ÂNGELO']},
-        {unit: 'SÃO BORJA', time: times['SÃO BORJA']},
-        {unit: 'SÃO LUIZ', time: times['SÃO LUIZ']}
+        {unit: 'CAMPO GRANDE', time: times['CAMPO GRANDE']['time'], tips: times['CAMPO GRANDE']['tips']},
+        {unit: 'CRUZ ALTA', time: times['CRUZ ALTA']['time'], tips: times['CRUZ ALTA']['tips']},
+        {unit: 'REGIONAL', time: times['REGIONAL']['time'], tips: times['REGIONAL']['tips']},
+        {unit: 'SANTA ROSA', time: times['SANTA ROSA']['time'], tips: times['SANTA ROSA']['tips']},
+        {unit: 'SANTO ÂNGELO', time: times['SANTO ÂNGELO']['time'], tips: times['SANTO ÂNGELO']['tips']},
+        {unit: 'SÃO BORJA', time: times['SÃO BORJA']['time'], tips: times['SÃO BORJA']['tips']},
+        {unit: 'SÃO LUIZ', time: times['SÃO LUIZ']['time'], tips: times['SÃO LUIZ']['tips']}
     ]
 
     const columns = [{
@@ -45,6 +43,11 @@ export default function Ranking(props) {
       }, {
         Header: 'Tempo',
         accessor: 'time',
+        sortable: false
+      }
+      , {
+        Header: 'Dicas',
+        accessor: 'tips',
         sortable: false
       }
     ]
