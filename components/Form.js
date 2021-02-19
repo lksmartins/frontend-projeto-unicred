@@ -74,6 +74,13 @@ export default function Form(props) {
 
             setButtonText(defaultButtonText)
         }
+
+        if( !response.status ){
+            setShowMessage('Houve um erro na comunicação, tente novamente.')
+            setModalShow(true)
+
+            setButtonText(defaultButtonText)
+        }
         
         
     }
