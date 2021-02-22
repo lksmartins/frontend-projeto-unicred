@@ -194,8 +194,10 @@ export default function Desafio(props) {
 
 			<p className="description">
 				Desafios - {unitName}
-				<br/>
+				<hr/>
 				Solucionem os 3 desafios para conquistar o cooperado mais difícil do mundo!
+				<hr/>
+				Atenção, olhem bem em seus envelopes, pois há itens pequenos que podem ficar presos nos cantos.
 			</p>
 
 			<div className="grid">

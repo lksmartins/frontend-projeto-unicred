@@ -27,13 +27,13 @@ export default function Ranking(props) {
     const { times } = props
 
     const data = [
-        {unit: 'CAMPO GRANDE', time: times['CAMPO GRANDE']['time'], tips: times['CAMPO GRANDE']['tips']},
-        {unit: 'CRUZ ALTA', time: times['CRUZ ALTA']['time'], tips: times['CRUZ ALTA']['tips']},
-        {unit: 'REGIONAL', time: times['REGIONAL']['time'], tips: times['REGIONAL']['tips']},
-        {unit: 'SANTA ROSA', time: times['SANTA ROSA']['time'], tips: times['SANTA ROSA']['tips']},
-        {unit: 'SANTO ÂNGELO', time: times['SANTO ÂNGELO']['time'], tips: times['SANTO ÂNGELO']['tips']},
-        {unit: 'SÃO BORJA', time: times['SÃO BORJA']['time'], tips: times['SÃO BORJA']['tips']},
-        {unit: 'SÃO LUIZ', time: times['SÃO LUIZ']['time'], tips: times['SÃO LUIZ']['tips']}
+        {unit: 'CAMPO GRANDE', time: times['CAMPO GRANDE']['time'], timefull: times['CAMPO GRANDE']['timefull'], tips: times['CAMPO GRANDE']['tips']},
+        {unit: 'CRUZ ALTA', time: times['CRUZ ALTA']['time'], timefull: times['CRUZ ALTA']['timefull'], tips: times['CRUZ ALTA']['tips']},
+        {unit: 'REGIONAL', time: times['REGIONAL']['time'], timefull: times['REGIONAL']['timefull'], tips: times['REGIONAL']['tips']},
+        {unit: 'SANTA ROSA', time: times['SANTA ROSA']['time'], timefull: times['SANTA ROSA']['timefull'], tips: times['SANTA ROSA']['tips']},
+        {unit: 'SANTO ÂNGELO', time: times['SANTO ÂNGELO']['time'], timefull: times['SANTO ÂNGELO']['timefull'], tips: times['SANTO ÂNGELO']['tips']},
+        {unit: 'SÃO BORJA', time: times['SÃO BORJA']['time'], timefull: times['SÃO BORJA']['timefull'], tips: times['SÃO BORJA']['tips']},
+        {unit: 'SÃO LUIZ', time: times['SÃO LUIZ']['time'], timefull: times['SÃO LUIZ']['timefull'], tips: times['SÃO LUIZ']['tips']}
     ]
 
     const columns = [{
@@ -48,6 +48,11 @@ export default function Ranking(props) {
       , {
         Header: 'Dicas',
         accessor: 'tips',
+        sortable: false
+      }
+      , {
+        Header: 'Tempo Final',
+        accessor: 'timefull',
         sortable: false
       }
     ]
@@ -71,7 +76,7 @@ export default function Ranking(props) {
 
                         sorted={[
                             { // the sorting model for the table
-                                id: 'time',
+                                id: 'timefull',
                                 desc: false
                             }
                         ]}
