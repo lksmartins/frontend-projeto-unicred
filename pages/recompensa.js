@@ -35,8 +35,11 @@ export default function Recompensa() {
           title="Parabéns!"
           >
           <div className={`colaboradores ${messageType.colaboradores}`}>
-            <p className="text-center mb-30">
+            <p className="text-center">
               Parabéns por essa conquista! Segue abaixo os valores referentes ao PPR do ano de 2020:
+            </p>
+            <p className="text-center mb-30">
+              * Valor não tem dedução do imposto de renda
             </p>
             <p className="content">
               <span className="cadastro">Cadastro: <span>{modalMessage.cadastro}</span></span>
