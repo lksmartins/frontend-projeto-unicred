@@ -64,7 +64,7 @@ export default function Parabens() {
 
             <div className="col right">
                 <p>
-                Através do jeito eleva de ser vocês completaram esta missão, superando os desafios com ética, colaboração e aprendizado contínuo vocês fizeram acontecer e provaram que juntos podem vencer qualquer desafio. Parabéns pela sua dedicação, que também os ajudou à vencer os desafios de 2020 e superar as metas.
+                Através do jeito Eleva de ser vocês completaram esta missão, superando os desafios com ética, colaboração e aprendizado contínuo vocês fizeram acontecer e provaram que juntos podem vencer qualquer desafio. Parabéns pela sua dedicação, que também os ajudou à vencer os desafios de 2020 e superar as metas.
                 </p>
                 <p>
                 Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail.
