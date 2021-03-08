@@ -64,13 +64,10 @@ export default function Parabens() {
 
             <div className="col right">
                 <p>
-                Vocês conseguiram conquistar o “Cooperado Mais Difícil do Mundo.”
+                Através do jeito eleva de ser vocês completaram esta missão, superando os desafios com ética, colaboração e aprendizado contínuo vocês fizeram acontecer e provaram que juntos podem vencer qualquer desafio. Parabéns pela sua dedicação, que também os ajudou à vencer os desafios de 2020 e superar as metas.
                 </p>
                 <p>
-                Através do jeito Eleva de ser, ao se IMPORTAR genuinamente em conquistar este cooperado, superando os desafios com ética, colaboração e aprendizado contínuo, vocês fizeram acontecer e provaram que juntos podem vencer e conquistar até mesmo o “Cooperado Mais Difícil do Mundo”.
-                </p>
-                <p>
-                Ele ficou tão encantado com o trabalho de vocês, que irá lhes dar uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar o cartão com sua senha pessoal. 
+                Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail.
                 </p>
                 <p>
                 Para acessar a sua recompensa individual acesse o link abaixo:
