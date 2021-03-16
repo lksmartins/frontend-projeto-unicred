@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
+import Button from '../../components/Button'
 import Card from '../../components/Card'
 import Form from '../../components/Form'
 import Modal from '../../components/Modal'
@@ -46,18 +48,13 @@ export async function getStaticProps(context){
 
 export default function Final(props) {
 
+  const router = useRouter()
+
   const [modalShow, setModalShow] = useState(false)
-  const [modalMessage, setModalMessage] = useState({cadastro:'', unidade:'', valor:'', salarios:''})
-  const [messageType, setMessageType] = useState({colaboradores:'', estagiarios:''})
+  const [modalMessage, setModalMessage] = useState('')
 
   function handleResponse(response) {
-
-    response = JSON.parse(response)
-    setModalMessage(response)
-
-    const type = response.valor == '' ? {colaboradores:'hidden', estagiarios:''} : {colaboradores:'', estagiarios:'hidden'}
-
-    setMessageType(type)
+    setModalMessage('O código está correto, clique em avançar para ir para o próximo passo.')
   }
 
   return (
@@ -72,36 +69,11 @@ export default function Final(props) {
           show={modalShow}
           onHide={()=>setModalShow(false)}
           title="Parabéns!"
+          footer={ <Button onClick={()=>router.push('/parabens')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
           >
-          <div className={`colaboradores ${messageType.colaboradores}`}>
-            <p className="text-center">
-              Parabéns por essa conquista! Segue abaixo os valores referentes ao PPR do ano de 2020:
-            </p>
-            <p className="text-center mb-30">
-              * Valor não tem dedução do imposto de renda
-            </p>
-            <p className="content">
-              <span className="cadastro">Cadastro: <span>{modalMessage.cadastro}</span></span>
-              <span className="unidade">Unidade: <span>{modalMessage.unidade}</span></span>
-              <span className="valor">Valor: <span>{modalMessage.valor}</span></span>
-              <span className="salarios">Salários: <span>{modalMessage.salarios}</span></span>
-            </p>
-          </div>
-
-          <div className={`estagiarios ${messageType.estagiarios}`}>
-            <p className="text-center">
-              Caro aprendiz do esquadrão Unicred,
-            </p>
-            <p className="text-center">
-              Estamos orgulhosos do seu aprendizado e comprometimento nesta jornada.
-            </p>
-            <p className="text-center">
-              Para se tornar um membro do Esquadrão Unicred é necessário ter vontade de aprender, dedicação e paixão no que faz.
-            </p>
-            <p className="text-center">
-              Acreditamos no seu potencial e esperamos que em breve possa ser um membro oficial do nosso esquadrão.
-            </p>
-          </div>
+          <p>
+            { modalMessage }
+          </p>
         </Modal>
 
         <div className="grid">
@@ -121,10 +93,10 @@ export default function Final(props) {
 
                 <p className="mt-30">Digite a senha de todos grupos abaixo:</p>
                 <Form 
-                id="final"
-                api_action="pass_check" 
-                response={handleResponse}
-                modalSet={setModalShow}
+                  id="final"
+                  api_action="final_check"
+                  response={handleResponse}
+                  modalSet={setModalShow}
                 />
 
                 {
