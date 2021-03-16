@@ -77,7 +77,7 @@ export default function Final(props) {
         </Modal>
 
         <div className="grid">
-            <Card card={{'title':'Parabéns', 'description':'Vocês concluíram a primeira etapa desse desafio. Agora outro desafio os aguarda.', 'ref':'grupo_final'}}>
+            <Card card={{'title':'Parabéns', 'description':'Vocês concluíram a primeira etapa do desafio. Agora para receber sua recompensa, todos os grupos devem terminar a primeira etapa também, pois cada um receberá uma parte da senha final. Entre em contato com os outros grupos para ajudá-los e obter os outros pedaços da senha final para vencer o desafio.', 'ref':'grupo_final'}}>
                 
                 <div className="circles">
                     <div className={`circle ${props.group.color}`}>{props.group.number}</div>
@@ -98,15 +98,6 @@ export default function Final(props) {
                   response={handleResponse}
                   modalSet={setModalShow}
                 />
-
-                {
-                /*
-                outros grupos
-                5 salas
-                relacionar link de cada jogo com senha
-                */
-
-                }
 
             </Card>
         </div>
