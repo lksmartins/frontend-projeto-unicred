@@ -16,7 +16,7 @@ export default function Timer(props) {
 
         if( loadedDate != null ){ return }
 
-        const res = await fetch('https://chavemestra.net/api/unicred/index.php', {
+        const res = await fetch('https://chave-mestra.net/api/unicred/index.php', {
             method: 'POST',
             body: JSON.stringify({ 
                 token:'rUiDIxjZHIoC8OYlb8lK6xspIwZ78TtJ', 
