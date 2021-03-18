@@ -59,20 +59,29 @@ export default function Parabens() {
             />
 
             <div className="col left">
-                <img className="rounded" src="/imgs/trophy.gif" />
+                <img className="rounded" src="/imgs/poster-unicred.webp" />
             </div>
 
             <div className="col right">
                 <p>
-                Através do jeito Eleva de ser vocês completaram esta missão, superando os desafios com ética, colaboração e aprendizado contínuo vocês fizeram acontecer e provaram que juntos podem vencer qualquer desafio. Parabéns pela sua dedicação, que também os ajudou à vencer os desafios de 2020 e superar as metas.
+                Através da colaboração e do espírito de equipe vocês conseguiram salvar a população de Green City e foram verdadeiros heróis. 
                 </p>
                 <p>
-                Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail.
+                Ao conquistar essa missão, vocês provaram que o resultado coletivo está acima do resultado individual. 
                 </p>
                 <p>
-                Para acessar a sua recompensa individual acesse o link abaixo:
+                Continuem sendo protagonistas do seu desenvolvimento, buscando sempre a inovação e a excelência, pois JUNTOS podem vencer qualquer desafio!
                 </p>
-                <h3>www.esquadraounicred.com.br/recompensa</h3>
+                <p>
+                Parabéns pela sua dedicação que também ajudou a vencer os desafios de 2020 e superarmos as metas. 
+                </p>
+                <p>
+                Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail. 
+                </p>
+                <p>
+                Para acessar a sua recompensa individual acesse o link: 
+                </p>
+                <h3><a href="www.esquadraounicred.com.br/recompensa">www.esquadraounicred.com.br/recompensa</a></h3>
             </div>
 
             
