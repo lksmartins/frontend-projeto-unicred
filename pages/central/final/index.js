@@ -37,36 +37,36 @@ export default function Recompensa() {
           >
           <div className={`colaboradores ${messageType.colaboradores}`}>
             <p className="text-center">
-              Parabéns por essa conquista! Segue abaixo os valores referentes ao PPR do ano de 2020:
-            </p>
-            <p className="text-center mb-30">
-              * Valor não tem dedução do imposto de renda
+            Parabéns pela sua dedicação e empenho em conquistar os objetivos de 2020. Contamos com você para construirmos juntos o resultado de 2021!
             </p>
             <p className="content central">
               <span className="cadastro">Cadastro: <span>{modalMessage.cadastro}</span></span>
               <span className="valor">Valor: <span>{modalMessage.valor}</span></span>
               <span className="salarios">Salários: <span>{modalMessage.salarios}</span></span>
             </p>
+            <p className="text-center mb-30">
+              * Valor não tem dedução do imposto de renda
+            </p>
           </div>
 
           <div className={`estagiarios ${messageType.estagiarios}`}>
             <p className="text-center">
-              Caro aprendiz do esquadrão Unicred,
+              Parabéns Esquadrão Unicred 
             </p>
             <p className="text-center">
-              Estamos orgulhosos do seu aprendizado e comprometimento nesta jornada.
+            Estamos orgulhosos do seu aprendizado e comprometimento nesta jornada, e por fazer parte do Esquadrão Unicred 2021!
             </p>
             <p className="text-center">
-              Para se tornar um membro do Esquadrão Unicred é necessário ter vontade de aprender, dedicação e paixão no que faz.
+            Você já é um membro através da sua cooperação, foco na excelência ,no desenvolvimento contínuo, de forma a gerar cada vez mais conexão com nossas cooperativas vamos ainda além!
             </p>
             <p className="text-center">
-              Acreditamos no seu potencial e esperamos que em breve possa ser um membro oficial do nosso esquadrão.
+            Acreditamos no seu potencial e vamos juntos construir os resultado para 2021.
             </p>
           </div>
 				</Modal>
 
         <div className="grid">
-            <Card card={{'title':'Recompensa', 'description':'Digite sua senha abaixo:', 'ref':'recompensa'}}>
+            <Card card={{'title':'Esquadrão Unicred', 'description':'Digite sua senha abaixo:', 'ref':'recompensa'}}>
               <Form 
                 id="recompensa"
                 api_action="central_senhas" 

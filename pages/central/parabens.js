@@ -67,21 +67,20 @@ export default function Parabens() {
                 Através da colaboração e do espírito de equipe vocês conseguiram salvar a população de Green City e foram verdadeiros heróis. 
                 </p>
                 <p>
-                Ao conquistar essa missão, vocês provaram que o resultado coletivo está acima do resultado individual. 
+                Ao conquistar essa missão, vocês provaram que o resultado coletivo está acima do resultado individual.
                 </p>
                 <p>
                 Continuem sendo protagonistas do seu desenvolvimento, buscando sempre a inovação e a excelência, pois JUNTOS podem vencer qualquer desafio!
                 </p>
                 <p>
-                Parabéns pela sua dedicação que também ajudou a vencer os desafios de 2020 e superarmos as metas. 
+                Pelo excelente trabalho irão receber uma mensagem especial! 
+                <br/>
+                Para acessar utilize a sua senha pessoal que foi enviada por e-mail no link abaixo:
                 </p>
+                <h3><a href="https://esquadraounicred.com.br/central/final">www.esquadraounicred.com.br/central/final</a></h3>
                 <p>
-                Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail. 
+                Saudações cooperativistas
                 </p>
-                <p>
-                Para acessar a sua recompensa individual acesse o link: 
-                </p>
-                <h3><a href="www.esquadraounicred.com.br/central/final">www.esquadraounicred.com.br/central/final</a></h3>
             </div>
 
             
