@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Button from '../../components/Button'
-import Card from '../../components/Card'
-import Form from '../../components/Form'
-import Modal from '../../components/Modal'
+import Button from '../../../components/Button'
+import Card from '../../../components/Card'
+import Form from '../../../components/Form'
+import Modal from '../../../components/Modal'
 
 export async function getStaticPaths() {
     return {

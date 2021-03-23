@@ -4,7 +4,7 @@ import AudioPlayer  from 'react-h5-audio-player'
 
 import 'react-h5-audio-player/lib/styles.css'
 
-import Modal from '../components/Modal'
+import Modal from '../../components/Modal'
 
 export default function Parabens() {
 
@@ -59,18 +59,24 @@ export default function Parabens() {
             />
 
             <div className="col left">
-                <img className="rounded" src="/imgs/trophy.gif" />
+                <img className="rounded" src="/imgs/poster-unicred.webp" />
             </div>
 
             <div className="col right">
                 <p>
-                Vocês conseguiram conquistar o “Cooperado Mais Difícil do Mundo.”
+                Através da colaboração e do espírito de equipe vocês conseguiram salvar a população de Green City e foram verdadeiros heróis. 
                 </p>
                 <p>
-                Através do jeito Eleva de ser, ao se IMPORTAR genuinamente em conquistar este cooperado, superando os desafios com ética, colaboração e aprendizado contínuo, vocês fizeram acontecer e provaram que juntos podem vencer e conquistar até mesmo o “Cooperado Mais Difícil do Mundo”.
+                Ao conquistar essa missão, vocês provaram que o resultado coletivo está acima do resultado individual. 
                 </p>
                 <p>
-                Ele ficou tão encantado com o trabalho de vocês, que irá lhes dar uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar o cartão com sua senha pessoal. 
+                Continuem sendo protagonistas do seu desenvolvimento, buscando sempre a inovação e a excelência, pois JUNTOS podem vencer qualquer desafio!
+                </p>
+                <p>
+                Parabéns pela sua dedicação que também ajudou a vencer os desafios de 2020 e superarmos as metas. 
+                </p>
+                <p>
+                Pelo excelente trabalho de vocês, irão receber uma recompensa. Esta recompensa é individual e intransferível e para acessá-la você deve utilizar a sua senha pessoal recebida por e-mail. 
                 </p>
                 <p>
                 Para acessar a sua recompensa individual acesse o link: 
