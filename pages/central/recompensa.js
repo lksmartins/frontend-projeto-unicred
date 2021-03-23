@@ -8,15 +8,16 @@ import Modal from '../../components/Modal'
 export default function Recompensa() {
 
   const [modalShow, setModalShow] = useState(false)
-  const [modalMessage, setModalMessage] = useState({cadastro:'', unidade:'', valor:'', salarios:''})
+  const [modalMessage, setModalMessage] = useState({cadastro:'', valor:'', salarios:''})
   const [messageType, setMessageType] = useState({colaboradores:'', estagiarios:''})
 
   function handleResponse(response) {
 
-    response = JSON.parse(response)
+    console.log('handleResponse', response)
+
     setModalMessage(response)
 
-    const type = response.valor == '' ? {colaboradores:'hidden', estagiarios:''} : {colaboradores:'', estagiarios:'hidden'}
+    const type = response.valor == '0' ? {colaboradores:'hidden', estagiarios:''} : {colaboradores:'', estagiarios:'hidden'}
 
     setMessageType(type)
   }
@@ -41,9 +42,8 @@ export default function Recompensa() {
             <p className="text-center mb-30">
               * Valor não tem dedução do imposto de renda
             </p>
-            <p className="content">
+            <p className="content central">
               <span className="cadastro">Cadastro: <span>{modalMessage.cadastro}</span></span>
-              <span className="unidade">Unidade: <span>{modalMessage.unidade}</span></span>
               <span className="valor">Valor: <span>{modalMessage.valor}</span></span>
               <span className="salarios">Salários: <span>{modalMessage.salarios}</span></span>
             </p>
@@ -69,7 +69,7 @@ export default function Recompensa() {
             <Card card={{'title':'Recompensa', 'description':'Digite sua senha abaixo:', 'ref':'recompensa'}}>
               <Form 
                 id="recompensa"
-                api_action="pass_check" 
+                api_action="central_senhas" 
                 response={handleResponse}
                 modalSet={setModalShow}
               />
