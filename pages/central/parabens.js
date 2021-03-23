@@ -81,7 +81,7 @@ export default function Parabens() {
                 <p>
                 Para acessar a sua recompensa individual acesse o link: 
                 </p>
-                <h3><a href="www.esquadraounicred.com.br/recompensa">www.esquadraounicred.com.br/recompensa</a></h3>
+                <h3><a href="www.esquadraounicred.com.br/central/final">www.esquadraounicred.com.br/central/final</a></h3>
             </div>
 
             

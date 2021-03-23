@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 
-import Card from '../../components/Card'
-import Form from '../../components/Form'
-import Modal from '../../components/Modal'
+import Card from '../../../components/Card'
+import Form from '../../../components/Form'
+import Modal from '../../../components/Modal'
 
 export default function Recompensa() {
 
