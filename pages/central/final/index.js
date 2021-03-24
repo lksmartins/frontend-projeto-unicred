@@ -41,11 +41,8 @@ export default function Recompensa() {
             </p>
             <p className="content central">
               <span className="cadastro">Cadastro: <span>{modalMessage.cadastro}</span></span>
-              <span className="valor">Valor: <span>{modalMessage.valor}</span></span>
+              <span className="valor">Valor PPR 2020: <span>{modalMessage.valor}</span></span>
               <span className="salarios">Salários: <span>{modalMessage.salarios}</span></span>
-            </p>
-            <p className="text-center mb-30">
-              * Valor não tem dedução do imposto de renda
             </p>
           </div>
 
