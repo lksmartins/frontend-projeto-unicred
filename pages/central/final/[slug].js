@@ -108,7 +108,7 @@ export default function Final(props) {
         </Modal>
 
         <div className="grid">
-            <Card card={{'title':'Parabéns', 'description':'Vocês concluíram a primeira etapa do desafio. Para receber sua recompensa, é necessário que todos os grupos concluam seu desafio, pois cada um receberá uma parte da senha final. Aguarde ser redirecionado para a sala principal no teams para se comunicar com os outros grupos e assim conseguirem inserir a senha final juntos.', 'ref':'grupo_final'}}>
+            <Card card={{'title':'Primeira etapa concluída', 'description':'Vocês concluíram a primeira etapa do desafio. Para receber sua recompensa, é necessário que todos os grupos concluam seu desafio, pois cada um receberá uma parte da senha final. Aguarde ser redirecionado para a sala principal no teams para se comunicar com os outros grupos e assim conseguirem inserir a senha final juntos.', 'ref':'grupo_final'}}>
                 
                 <div className="circles">
                     <div className={`circle ${props.group.color}`}>{props.group.number}</div>
