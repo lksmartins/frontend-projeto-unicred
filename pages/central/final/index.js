@@ -44,6 +44,9 @@ export default function Recompensa() {
               <span className="valor">Valor PPR 2020: <span>{modalMessage.valor}</span></span>
               <span className="salarios">Salários: <span>{modalMessage.salarios}</span></span>
             </p>
+            <p className="text-center">
+            *Valor bruto, haverá incidência de imposto de renda.
+            </p>
           </div>
 
           <div className={`estagiarios ${messageType.estagiarios}`}>
