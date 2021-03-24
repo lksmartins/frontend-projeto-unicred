@@ -100,7 +100,7 @@ export default function Final(props) {
           show={modalShow}
           onHide={()=>setModalShow(false)}
           title="Parabéns!"
-          footer={ <Button onClick={()=>router.push('/parabens')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
+          footer={ <Button onClick={()=>router.push('/central/parabens')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
           >
           <p>
             { modalMessage }
