@@ -1,0 +1,24 @@
+#pos-jogo{
+
+    .grid{
+        display: flex;
+        flex-direction: row;
+
+        .col{
+            flex-basis: calc(50% - 20px);
+            padding: 0 20px;
+
+            &.left{
+                padding-left: 0;
+            }
+            &.right{
+                padding-right: 0;
+            }
+        }
+
+        .audio{
+            margin: 0 18px 50px 18px;
+        }
+    }
+
+}
