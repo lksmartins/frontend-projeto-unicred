@@ -127,7 +127,7 @@ export default function Final(props) {
           show={modalShow}
           onHide={()=>setModalShow(false)}
           title="Parabéns!"
-          footer={ <Button className={ showBtn == true ? 'button agibank show' : 'button agibank hidden' } onClick={()=>router.push('/v2/pos-jogo')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
+          footer={ <a href="https://escapelive.chavemestra.net/agibank/parabens" className={ showBtn == true ? 'button agibank show' : 'button agibank hidden' }><i className="fas fa-chevron-circle-right"/> Avançar</a> }
           >
           <p>
             { modalMessage }
