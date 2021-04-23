@@ -347,6 +347,19 @@ img {
   padding: 15px;
 }
 
+.button.agibank {
+  background: #266BFF;
+}
+
+.button.agibank:hover {
+  background: #266BFF;
+  opacity: 0.8;
+}
+
+.button.agibank.hidden {
+  display: none;
+}
+
 #agibank .button {
   background: #266BFF;
 }

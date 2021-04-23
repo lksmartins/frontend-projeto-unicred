@@ -37,6 +37,19 @@
     padding: 15px;
 }
 
+.button.agibank{
+    background: #266BFF;
+
+    &:hover{
+        background: #266BFF;
+        opacity: 0.8;
+    }
+
+    &.hidden{
+        display: none;
+    }
+}
+
 #agibank{
 
     // #266BFF

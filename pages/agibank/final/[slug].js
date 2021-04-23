@@ -92,8 +92,14 @@ export default function Final(props) {
 
     if( response.status == 200 ){
       setModalMessage('O código final foi inserido com sucesso. Clique em Avançar para ir para o próximo passo.')
-      setModalShow(true)
+      setShowBtn(true)
     }
+    else{
+      setModalMessage(response.message)
+      setShowBtn(false)
+    }
+
+    setModalShow(true)
 
 }
 
@@ -106,11 +112,8 @@ export default function Final(props) {
   }, [check])
 
   const [modalShow, setModalShow] = useState(false)
+  const [showBtn, setShowBtn] = useState(false)
   const [modalMessage, setModalMessage] = useState('')
-
-  function handleResponse(response) {
-    setModalMessage('O código está correto, clique em avançar para ir para o próximo passo.')
-  }
 
   return (
     <div className="container" id="agibank">
@@ -124,7 +127,7 @@ export default function Final(props) {
           show={modalShow}
           onHide={()=>setModalShow(false)}
           title="Parabéns!"
-          footer={ <Button onClick={()=>router.push('/v2/pos-jogo')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
+          footer={ <Button className={ showBtn == true ? 'button agibank show' : 'button agibank hidden' } onClick={()=>router.push('/v2/pos-jogo')}><i className="fas fa-chevron-circle-right"/> Avançar</Button> }
           >
           <p>
             { modalMessage }
@@ -154,8 +157,6 @@ export default function Final(props) {
                 <Form 
                   id="final"
                   onSubmit={finalCheck}
-                  response={handleResponse}
-                  modalSet={setModalShow}
                 />
 
             </Card>
