@@ -36,3 +36,21 @@
     align-items: center;
     padding: 15px;
 }
+
+#agibank{
+
+    // #266BFF
+
+    .button{
+        background: #266BFF;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    .card:hover{
+        border-color: #266BFF;
+    }
+
+}

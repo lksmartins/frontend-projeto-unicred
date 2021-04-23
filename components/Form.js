@@ -86,7 +86,7 @@ export default function Form(props) {
     }
 
     return(
-        <form className={props.className ? props.className : '' } onSubmit={handleSubmit}>
+        <form className={props.className ? props.className : '' } onSubmit={ props.onSubmit ? props.onSubmit : handleSubmit}>
             { props.children ? props.children :
                 <input
                 type="text"

@@ -7,7 +7,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter()
-  const header = router.pathname == '/v2/pos-jogo' ? null : <Header />
+  const header = router.pathname == '/v2/pos-jogo' || '/agibank/final/[slug]' ? null : <Header />
 
   console.log(router.pathname)
 

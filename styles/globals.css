@@ -347,6 +347,18 @@ img {
   padding: 15px;
 }
 
+#agibank .button {
+  background: #266BFF;
+}
+
+#agibank .button:hover {
+  opacity: 0.8;
+}
+
+#agibank .card:hover {
+  border-color: #266BFF;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
