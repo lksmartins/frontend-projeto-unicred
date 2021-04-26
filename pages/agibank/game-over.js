@@ -21,7 +21,7 @@ export default function GameOver() {
 
                 <div className="col mt-30 mb-30 text-center">
                     <h3>
-                    Você não concluiu o jogo, mas isso não significa que não houve aprendizados. Essa experiência não é sobre escapar, mas sim sobre aprender algo novo. Reflita sobre essa experiência e logo mais converse com seus colegas.
+                    Você não concluiu o jogo, mas isso não significa que não houveram aprendizados. Essa experiência não é sobre escapar, mas sim sobre aprender algo novo. Reflita sobre essa experiência e logo mais converse com seus colegas.
                     </h3>
                 </div>
                 
