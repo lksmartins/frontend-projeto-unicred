@@ -67,7 +67,7 @@ export default function Final(props) {
       console.log(response)
 
       if( response.status == 200 ){
-        setModalMessage('O código final foi inserido com sucesso. Clique em Avançar para ir para o próximo passo.')
+        setModalMessage(response.message)
         setShowBtn(true)
         setModalShow(true)
       }

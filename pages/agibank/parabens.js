@@ -31,7 +31,7 @@ export default function Parabens() {
     return (
         <div className="container" id="agibank">
         <Head>
-            <title>Projeto Unicred</title>
+            <title>Agibank - Escape Live</title>
         </Head>
 
         <main className="main">
