@@ -46,16 +46,19 @@ export async function getStaticProps(context){
 
 export default function Final(props) {
 
+  const hash = props.group.slug
+
   const router = useRouter()
   
   const [check, setCheck] = useState(0)
 
+  // to verify if all groups are done with their challenges
   async function callApi(){
 
       const res = await fetch('https://escapelive.chavemestra.net/site/actions.php', {
           method: 'POST',
           body: JSON.stringify({ 
-              action: 'agibankFinalCode'
+              action: 'agibankGroupsDone'
           })
       })
 
@@ -68,39 +71,6 @@ export default function Final(props) {
         setShowBtn(true)
         setModalShow(true)
       }
-
-  }
-
-  async function finalCheck(e){
-
-    e.preventDefault()
-
-    console.log('finalCheck', e.target[0].value)
-
-    const code = e.target[0].value
-
-    const res = await fetch('https://escapelive.chavemestra.net/site/actions.php', {
-        method: 'POST',
-        body: JSON.stringify({ 
-            action: 'agibankFinalCodeCheck',
-            code: code
-        })
-    })
-
-    const response = await res.json()
-
-    console.log(response)
-
-    if( response.status == 200 ){
-      setModalMessage('O código final foi inserido com sucesso. Clique em Avançar para ir para o próximo passo.')
-      setShowBtn(true)
-    }
-    else{
-      setModalMessage(response.message)
-      setShowBtn(false)
-    }
-
-    setModalShow(true)
 
   }
 
@@ -128,7 +98,7 @@ export default function Final(props) {
           show={modalShow}
           onHide={()=>setModalShow(false)}
           title="Aviso"
-          footer={ <a href="https://escapelive.chavemestra.net/agibank/parabens" className={ showBtn == true ? 'button agibank show' : 'button agibank hidden' }><i className="fas fa-chevron-circle-right"/> Avançar</a> }
+          footer={ <a href={`https://escapelive.chavemestra.net/agibank/final/${hash}`} className={ showBtn == true ? 'button agibank show' : 'button agibank hidden' }><i className="fas fa-chevron-circle-right"/> Avançar</a> }
           >
           <p>
             { modalMessage }
@@ -140,26 +110,11 @@ export default function Final(props) {
         <div className="grid">
             <Card card={{
               'title':'Primeira etapa concluída', 
-              'description':'Vocês concluíram a primeira etapa do desafio. Para concluir essa missão, é necessário que todos os grupos concluam seu desafio, pois cada um receberá uma parte da senha final. Aguarde ser redirecionado para a sala principal no zoom para se comunicar com os outros grupos e assim conseguirem inserir a senha final juntos.', 
+              'description':'', 
               'ref':'grupo_final'}}>
-                
-                <div className="circles">
-                    <div className={`circle ${props.group.color}`}>{props.group.number}</div>
-                </div>
-                
-                <div className="circles">
-                    <div className="circle blue"></div>
-                    <div className="circle red"></div>
-                    <div className="circle yellow"></div>
-                    <div className="circle black"></div>
-                </div>
-
-                <p className="mt-30">Digite a senha de todos grupos abaixo:</p>
-                <Form 
-                  id="final"
-                  onSubmit={finalCheck}
-                />
-
+              <p>
+              Vocês concluíram a primeira etapa do desafio. Para concluir essa missão, é necessário que todos os grupos concluam seu respectivo desafio e vocês serão redirecionados a página principal. Aguardem.
+              </p>
             </Card>
         </div>
 
