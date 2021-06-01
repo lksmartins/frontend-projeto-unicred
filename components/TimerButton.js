@@ -28,13 +28,13 @@ export default function TimerButton(props) {
             hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
             minutes: Math.floor((difference / 1000 / 60) % 60),
             seconds: Math.floor((difference / 1000) % 60)
+            }
         }
-      }
-      
-      if( difference <= 0 ){
-        setButtonDisabled('')
-        return props.children
-      }
+        
+        if( difference <= 0 ){
+            setButtonDisabled('')
+            return props.children
+        }
 
       return `${timeLeft.minutes > 9 ? timeLeft.minutes : "0"+timeLeft.minutes }:${ timeLeft.seconds > 9 ? timeLeft.seconds : "0"+timeLeft.seconds }`
     }
